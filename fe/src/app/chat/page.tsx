@@ -114,17 +114,17 @@ export default function Home() {
         className="flex flex-col items-center w-full h-full gap-4"
         style={{
           display: "grid",
-          gridTemplateRows: "auto 1fr",
+          gridTemplateRows: "1fr",
           gridTemplateColumns: "1fr",
         }}
       >
-        <Card className="max-h-full w-full drop-shadow-md h-full min-h-[200px]">
+        {/* <Card className="max-h-full w-full drop-shadow-md h-full min-h-[200px]">
           <CardHeader className="font-bold text-lg">
             테크_챗 추천질문
           </CardHeader>
           <CardBody className="text-sm">테크_챗 추천질문</CardBody>
           <CardFooter>테크_챗 추천질문</CardFooter>
-        </Card>
+        </Card> */}
         <Card className="flex flex-col items-center justify-start w-full gap-3 p-4 drop-shadow-md h-full">
           <div className="flex flex-row gap-2 w-full h-fit">
             <Dropdown>

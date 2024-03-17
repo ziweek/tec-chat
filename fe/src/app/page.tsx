@@ -109,7 +109,7 @@ export default function Home() {
       <div className="flex h-full py-16 min-h-screen flex-col items-center justify-center space-y-8">
         <p className="select-none text-2xl font-bold">핵심기능 소개</p>
         <div
-          className="flex min-h-[40vh] w-fit select-none flex-col items-center justify-between max-w-[1024px]"
+          className="flex min-h-[40vh] w-full select-none flex-col items-center justify-between max-w-[1024px] px-4"
           style={
             mobile
               ? { gap: "20px" }
