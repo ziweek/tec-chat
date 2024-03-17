@@ -1,0 +1,11 @@
+Model Information:
+* title:	K9A3-VIDAR ( Thunder) Polish version
+* source:	https://sketchfab.com/3d-models/k9a3-vidar-thunder-polish-version-ce6f48f27868427dadceaadfb061a85e
+* author:	CloudHub (https://sketchfab.com/cloudhub)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "K9A3-VIDAR ( Thunder) Polish version" (https://sketchfab.com/3d-models/k9a3-vidar-thunder-polish-version-ce6f48f27868427dadceaadfb061a85e) by CloudHub (https://sketchfab.com/cloudhub) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
