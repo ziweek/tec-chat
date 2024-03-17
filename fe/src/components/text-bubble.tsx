@@ -9,42 +9,36 @@ type propsForTextBubble = {
   text: string;
   isSent: boolean;
   isAnimated: boolean;
-  indexStage: number;
+  indexStage?: number;
   isLast: boolean;
 };
 
 export default function TextBubble(props: propsForTextBubble) {
   return (
     <div
-      className={`space-y-4 flex flex-col w-full ${
+      className={`space-y-1 flex flex-col w-full py-2 ${
         props.isSent ? "items-end" : "items-start"
       }`}
     >
-      <div
+      {/* <div
         className={`flex flex-row h-fit items-end space-x-2 w-full ${
           props.isSent ? "justify-end" : "justify-start"
         }`}
-      >
-        <Image
+      > */}
+      {/* <Image
           src={props.imgSrc}
           alt="a"
           height={50}
           width={50}
           className={`${props.isSent ? "opacity-0" : ""}`}
-        ></Image>
-        <p className="text-pretty text-center break-keep font-bold">
-          {props.isSent ? "사용자" : props.name}
-        </p>
-      </div>
+        ></Image> */}
+      <p className="text-pretty text-center break-keep font-bold text-sm">
+        {props.isSent ? "사용자" : props.name}
+      </p>
+      {/* </div> */}
       <Card
-        className={`w-fit max-w-[90%] h-fit shadow-none border-0 p-4 text-black ${
-          props.isSent
-            ? "bg-gray-100"
-            : props.indexStage == 0
-            ? "bg-blue-100 dark:bg-blue-300"
-            : props.indexStage == 1
-            ? "bg-orange-100 dark:bg-orange-300"
-            : "bg-purple-100 dark:bg-purple-300"
+        className={`w-fit max-w-[90%] h-fit shadow-none border-0 p-3 text-black ${
+          props.isSent ? "bg-gray-100" : "bg-primary-50"
         } `}
         shadow={"none"}
       >

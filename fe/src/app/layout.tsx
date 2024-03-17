@@ -30,8 +30,8 @@ const nanumSquare = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "발표의 정석 | 세상에서 가장 쉬운 피칭",
-  description: "세상에서 가장 쉬운 피칭",
+  title: "테크_챗 | 생성형 AI를 활용한 야전교범 챗봇 가이드",
+  description: "생성형 AI를 활용한 야전교범 챗봇 가이드",
   viewport: {
     width: "device-width",
     initialScale: 1,
