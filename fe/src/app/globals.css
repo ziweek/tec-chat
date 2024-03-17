@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.gm-style iframe + div {
+  border: none !important;
+}
+
+.carousel .control-dots .dot {
+  background-color: #00000075 !important;
+}
+
+/* 
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.react-horizontal-scrolling-menu--scroll-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .gm-style .gm-style-iw-c {
+    background-color: black;
+  }
+
+  .gm-style-iw-d {
+    background-color: black;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .gm-style-iw-d::-webkit-scrollbar {
+    display: none;
+  }
+  .gm-style .gm-style-iw-tc::after {
+    background: black;
+  }
+} */
+
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  -webkit-user-drag: none;
+}
