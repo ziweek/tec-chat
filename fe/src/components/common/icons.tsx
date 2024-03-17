@@ -307,6 +307,7 @@ export const IconVoice = (props: IconProps) => {
     </>
   );
 };
+
 export const IconPrev = (props: IconProps) => {
   return (
     <>
@@ -388,6 +389,7 @@ export const IconPrev = (props: IconProps) => {
     </>
   );
 };
+
 export const IconNext = (props: IconProps) => {
   return (
     <>

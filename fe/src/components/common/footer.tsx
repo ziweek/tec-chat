@@ -27,9 +27,9 @@ export default function Footer(props: any) {
       }`}
     >
       <div className="flex flex-col justify-center items-center select-none h-full gap-1">
-        <div className="flex flex-col justify-center items-center select-none h-full leading-none">
-          <p className="text-tiny">Team</p>
-          <p className="font-bold">BlackMangoLab</p>
+        <div className="flex flex-col justify-center items-center select-none h-full leading-none gap-1">
+          <p className="font-bold">육군팀</p>
+          <p className="text-tiny">제11회 육군창업경진대회</p>
         </div>
         <div className="gap-1 h-full flex flex-row ">
           <Button

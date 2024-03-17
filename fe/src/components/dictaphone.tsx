@@ -27,11 +27,13 @@ const Dictaphone = () => {
   };
 
   return (
-    <div>
+    <div className="w-full flex items-center flex-col">
       <p>Microphone: {listening ? "on" : "off"}</p>
-      <button onClick={() => toggleListening()}>Start</button>
-      <button onClick={SpeechRecognition.stopListening}>Stop</button>
-      <button onClick={resetTranscript}>Reset</button>
+      <div className="space-x-1 w-full flex items-center flex-col">
+        <button onClick={() => toggleListening()}>Start</button>
+        <button onClick={SpeechRecognition.stopListening}>Stop</button>
+        <button onClick={resetTranscript}>Reset</button>
+      </div>
       <p>{transcript}</p>
     </div>
   );
