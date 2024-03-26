@@ -152,6 +152,10 @@ export default function Home() {
                   name: "K200 보병 전투장갑차",
                   src: "/images/thumbnail/k200.png",
                 },
+                {
+                  name: "AH-64D 아파치 롱보우",
+                  src: "/images/thumbnail/apache.png",
+                },
               ].map((e, i) => {
                 return (
                   <div
