@@ -6,26 +6,16 @@ import { useRouter } from "next/navigation";
 import {
   Button,
   Tooltip,
-  Divider,
   Input,
   Modal,
   ModalContent,
   ModalFooter,
   ModalHeader,
-  Textarea,
   Dropdown,
   DropdownTrigger,
   DropdownMenu,
-  DropdownSection,
   DropdownItem,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
   Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  CircularProgress,
 } from "@nextui-org/react";
 import Header from "@/components/common/header";
 import { useIsMobile } from "@/hooks/useMediaQuery";
@@ -34,11 +24,12 @@ import TextBubble from "@/components/text-bubble";
 import ThreeRender from "@/components/3d-render";
 import { Lottie3DModel } from "@/components/common/lotties";
 import Dictaphone from "@/components/dictaphone";
+import FooterTray from "@/components/common/footer-tray";
 
 export default function Home() {
-  const [inputTextArea, setInputTextArea] = useState<string>(
-    "안녕하십니까. 반갑습니다. 오늘 발표를 맡게 된 김지욱입니다."
-  );
+  // const [inputTextArea, setInputTextArea] = useState<string>(
+  //   "안녕하십니까. 반갑습니다. 오늘 발표를 맡게 된 김지욱입니다."
+  // );
   //
   const router = useRouter();
   const isMobile = useIsMobile();
@@ -93,14 +84,14 @@ export default function Home() {
     checkResize();
   }, [isMobile]);
 
-  const queryInputTextArea = useQuery({
-    queryKey: ["inputTextArea"],
-    queryFn: () => inputTextArea,
-  });
+  // const queryInputTextArea = useQuery({
+  //   queryKey: ["inputTextArea"],
+  //   queryFn: () => inputTextArea,
+  // });
 
   return (
     <section
-      className="flex flex-col items-center justify-start w-full h-screen pb-12 gap-4 px-4 max-w-[1024px] mx-auto"
+      className="flex flex-col items-center justify-start w-full h-screen gap-4 max-w-[1024px] mx-auto"
       style={{
         display: "grid",
         gridTemplateRows: "auto 1fr auto",
@@ -111,7 +102,7 @@ export default function Home() {
       <Header title={"교범 챗봇과 대화하기"} isBackButtonVisible></Header>
       {/*  */}
       <div
-        className="flex flex-col items-center w-full h-full gap-4"
+        className="flex flex-col items-center w-full h-full gap-4 px-4"
         style={{
           display: "grid",
           gridTemplateRows: "1fr",
@@ -180,8 +171,8 @@ export default function Home() {
             ) : (
               <div className="relative border-2 rounded-xl border-primary flex flex-col justify-center items-center h-full w-full drop-shadow-md">
                 <Lottie3DModel
-                  play
-                  loop
+                  // play
+                  // loop
                   width={"250px"}
                   height={"250px"}
                 ></Lottie3DModel>
@@ -194,7 +185,7 @@ export default function Home() {
         </Card>
       </div>
       {/*  */}
-      <div className="flex flex-row gap-2 w-full justify-end h-fit">
+      {/* <div className="flex flex-row gap-2 w-full justify-end h-fit">
         <Button
           variant={"shadow"}
           size={"lg"}
@@ -210,7 +201,9 @@ export default function Home() {
         >
           교범 챗봇과 대화 시작하기
         </Button>
-      </div>
+      </div> */}
+      {/*  */}
+      <FooterTray></FooterTray>
       {/*  */}
       <Modal
         isOpen={isModalVisible}

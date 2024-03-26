@@ -7,18 +7,6 @@ import { useScroll, useMotionValueEvent } from "framer-motion";
 
 export default function Footer(props: any) {
   const router = useRouter();
-  const queryClient = useQueryClient();
-  // const [isFooterFixed, setIsFooterFixed] = useState<boolean>(true);
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", () => {
-  //     if (window.scrollY > 50) {
-  //       setIsFooterFixed(false);
-  //     } else {
-  //       setIsFooterFixed(true);
-  //     }
-  //   });
-  // }, []);
 
   return (
     <section

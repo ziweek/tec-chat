@@ -12,8 +12,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: { 50: "#0062B025", DEFAULT: "#0062B0" },
-        secondary: "#F2E9DA",
+        primary: { 50: "#0C2F1D25", DEFAULT: "#0C2F1D" },
+        secondary: "#63796E",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
