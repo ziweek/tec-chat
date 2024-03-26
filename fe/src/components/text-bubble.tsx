@@ -20,22 +20,9 @@ export default function TextBubble(props: propsForTextBubble) {
         props.isSent ? "items-end" : "items-start"
       }`}
     >
-      {/* <div
-        className={`flex flex-row h-fit items-end space-x-2 w-full ${
-          props.isSent ? "justify-end" : "justify-start"
-        }`}
-      > */}
-      {/* <Image
-          src={props.imgSrc}
-          alt="a"
-          height={50}
-          width={50}
-          className={`${props.isSent ? "opacity-0" : ""}`}
-        ></Image> */}
       <p className="text-pretty text-center break-keep font-bold text-sm">
         {props.isSent ? "사용자" : props.name}
       </p>
-      {/* </div> */}
       <Card
         className={`w-fit max-w-[90%] h-fit shadow-none border-0 p-3 text-black ${
           props.isSent ? "bg-gray-100" : "bg-primary-50"

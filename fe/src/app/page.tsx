@@ -93,7 +93,7 @@ export default function Home() {
                 color={"primary"}
                 variant={"bordered"}
                 onClick={() => {
-                  router.push("/chat");
+                  router.push("/home");
                 }}
               >
                 프로젝트 체험하기
