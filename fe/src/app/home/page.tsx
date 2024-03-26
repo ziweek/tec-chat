@@ -12,6 +12,7 @@ import {
   IconPhone,
 } from "@/components/common/icons";
 import FooterTray from "@/components/common/footer-tray";
+import Image from "next/image";
 
 export default function Home() {
   //
@@ -77,7 +78,7 @@ export default function Home() {
                     key={i}
                     className="bg-white shadow-md rounded-lg w-[200px] h-[120px] p-4 shadow-black-90"
                   >
-                    <p className="line-clamp-4 text-sm w-full whitespace-normal text-pretty break">
+                    <p className="line-clamp-4 text-sm w-full whitespace-normal text-pretty">
                       {e.text}
                     </p>
                   </div>
@@ -124,7 +125,7 @@ export default function Home() {
                     key={i}
                     className="bg-secondary shadow-md rounded-lg w-[120px] h-[150px] p-4 shadow-black-90 flex flex-col justify-between text-white"
                   >
-                    <p className="line-clamp-4 text-sm w-full whitespace-normal text-pretty break">
+                    <p className="line-clamp-4 text-sm w-full whitespace-normal text-pretty">
                       {e.title}
                     </p>
                     <p className="text-tiny">{e.date} 개정</p>
@@ -137,7 +138,7 @@ export default function Home() {
         <div className="flex-col grid gap-1 w-full">
           <div className="flex flex-row w-full justify-between items-center">
             <p className="font-bold  text-lg px-4 text-primary">
-              최근 추가된 장비
+              최근 조회한 장비 내역
             </p>
             <Button variant={"light"} disableRipple color={"secondary"}>
               더 보기
@@ -145,13 +146,28 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-2 overflow-auto px-4 scrollbar-hide">
             <div className="flex gap-4 whitespace-nowrap w-fit pb-4">
-              {[1, 2, 3, 4, 5].map((e, i) => {
+              {[
+                { name: "K-9 자주포", src: "/images/thumbnail/k9.png" },
+                {
+                  name: "K200 보병 전투장갑차",
+                  src: "/images/thumbnail/k200.png",
+                },
+              ].map((e, i) => {
                 return (
                   <div
                     key={i}
-                    className="bg-white shadow-md rounded-lg w-[60vw] h-[60vw] p-4 shadow-black-90"
+                    className="bg-white shadow-md rounded-lg w-[75vw] h-[75vw] p-4 shadow-black-90 relative"
                   >
-                    <p></p>
+                    <p className="line-clamp-4 text-md w-full whitespace-normal text-pretty absolute top-4 left-4">
+                      {e.name}
+                    </p>
+                    <Image
+                      src={e.src}
+                      width={100}
+                      height={100}
+                      alt="img"
+                      className="w-full h-full"
+                    ></Image>
                   </div>
                 );
               })}
