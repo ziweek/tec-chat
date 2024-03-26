@@ -13,7 +13,10 @@ export default function Header(props: any) {
       }`}
     >
       {/* BASIC HEADER */}
-      <div className="flex flex-row w-full justify-between items-center bg-white min-h-[50px] py-2">
+      <div
+        className="flex flex-row w-full justify-between items-center min-h-[50px] py-2"
+        style={{ backgroundColor: props.backgroundColor }}
+      >
         <div className="flex flex-row items-center justify-between w-full gap-2 px-1">
           {/*  */}
           {props.isBackButtonVisible && (

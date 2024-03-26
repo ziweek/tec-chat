@@ -18,43 +18,6 @@ export default function Home() {
   const router = useRouter();
   const isMobile = useIsMobile();
   const [mobile, setMobile] = useState<boolean>(false);
-  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
-  const [inputText, setInputText] = useState("");
-  const messageEndRef = useRef<HTMLDivElement | null>(null);
-  const webcamRef = useRef<any>(null);
-  const [dialogContext, setDialogContext] = useState([
-    {
-      isAnimated: true,
-      isSent: false,
-      isLoading: false,
-      imgSrc: "/images/logo.png",
-      name: "테크_챗",
-      text: "안녕하세요! 저는 누구누구 입니다.",
-    },
-  ]);
-  const [isTooltipOpen, setIsTooltipOpen] = useState<boolean>(false);
-  const [indexOfTooltip, setindexOfTooltip] = useState<number | undefined>(
-    undefined
-  );
-
-  const [isWebCamLoaded, setIsWebCamLoaded] = useState<boolean>(false);
-  const [selectedCategory, setSelectedCategory] = useState(new Set(["범주"]));
-  const selectedCategoryValue = useMemo(
-    () => Array.from(selectedCategory).join(", ").replaceAll("_", " "),
-    [selectedCategory]
-  );
-  const [selectedEquipment, setSelectedEquipment] = useState(new Set(["장비"]));
-  const selectedEquipmentValue = useMemo(
-    () => Array.from(selectedEquipment).join(", ").replaceAll("_", " "),
-    [selectedEquipment]
-  );
-
-  const videoConstraints = {
-    width: 1280,
-    height: 1280,
-    facingMode: "camera",
-    aspectRatio: 1,
-  };
 
   const checkResize = () => {
     if (isMobile) {
@@ -68,11 +31,6 @@ export default function Home() {
     checkResize();
   }, [isMobile]);
 
-  // const queryInputTextArea = useQuery({
-  //   queryKey: ["inputTextArea"],
-  //   queryFn: () => inputTextArea,
-  // });
-
   return (
     <section
       className="flex flex-col items-center justify-start w-full min-h-screen gap-4 max-w-[1024px] mx-auto bg-primary-50"
@@ -83,52 +41,109 @@ export default function Home() {
       }}
     >
       {/*  */}
-      <Header></Header>
+      <Header backgroundColor={"primary"}></Header>
       {/*  */}
-      <div className="flex flex-col items-center w-full h-full justify-start gap-4">
-        <div className="flex-col grid gap-2">
-          <p className="font-bold  text-lg px-4 text-primary">
-            최근에 업데이트 된 교범
-          </p>
+      <div className="flex flex-col items-center w-full h-full justify-start gap-2">
+        <div className="flex-col grid gap-1 w-full">
+          <div className="flex flex-row w-full justify-between items-center">
+            <p className="font-bold  text-lg px-4 text-primary">
+              자주 묻는 질문
+            </p>
+            <Button variant={"light"} disableRipple color={"secondary"}>
+              더 보기
+            </Button>
+          </div>
           <div className="flex flex-col gap-2 overflow-auto px-4 scrollbar-hide">
             <div className="flex gap-4 whitespace-nowrap w-fit pb-4">
-              {[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5].map((e, i) => {
+              {[
+                {
+                  text: "현무-4 탄도미사일의 유도 시스템에는 어떤 기술이 사용되고 있나요?",
+                },
+                {
+                  text: "K2 전차의 동력원으로는 어떤 유형의 엔진을 사용하고 있나요?",
+                },
+                {
+                  text: "K21 보병전투차량은 어떤 유형의 방호 장갑을 갖고 있나요?",
+                },
+                {
+                  text: "해당 무인정찰기의 최대 운용 고도는 어느 정도인가요?",
+                },
+                {
+                  text: "AH-64E 가디언 아파치의 주요 무기 시스템은 무엇인가요?",
+                },
+              ].map((e, i) => {
                 return (
                   <div
                     key={i}
-                    className="bg-white shadow-md rounded-lg w-[120px] h-[150px] p-4 shadow-black-90"
+                    className="bg-white shadow-md rounded-lg w-[200px] h-[120px] p-4 shadow-black-90"
                   >
-                    <p></p>
+                    <p className="text-pretty line-clamp-4 text-sm">{e.text}</p>
                   </div>
                 );
               })}
             </div>
           </div>
         </div>
-        <div className="flex-col grid gap-2">
-          <p className="font-bold  text-lg px-4 text-primary">자주 묻는 질문</p>
-          <div className="flex flex-col gap-2 overflow-auto px-4 scrollbar-hide">
+        <div className="flex-col grid gap-1 w-full">
+          <div className="flex flex-row w-full justify-between items-center">
+            <p className="font-bold  text-lg px-4 text-primary">
+              최근 업데이트 된 교범
+            </p>
+            <Button variant={"light"} disableRipple color={"secondary"}>
+              더 보기
+            </Button>
+          </div>
+          <div className="flex flex-col gap-2 overflow-auto scrollbar-hide px-4">
             <div className="flex gap-4 whitespace-nowrap w-fit pb-4">
-              {[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5].map((e, i) => {
+              {[
+                {
+                  title: "현무-4 탄도미사일의 운용 및 유지보수 절차",
+                  date: "2024.03.01",
+                },
+                {
+                  title: "K2 전차의 전투 전략 및 기술적 특성에 관한 교범",
+                  date: "2023.05.15",
+                },
+                {
+                  title: "무인정찰기의 운용 방법 및 기술적 특성에 관한 교범",
+                  date: "2023.07.28",
+                },
+                {
+                  title: "통신장비 운용에 대한 교범 개정안",
+                  date: "2024.02.21",
+                },
+                {
+                  title: "K-9 자주포 현가장치 부분 조정에 관한 교범",
+                  date: "2023.11.03",
+                },
+              ].map((e, i) => {
                 return (
                   <div
                     key={i}
-                    className="bg-white shadow-md rounded-lg w-[250px] h-[150px] p-4 shadow-black-90"
+                    className="bg-secondary shadow-md rounded-lg w-[120px] h-[150px] p-4 shadow-black-90 flex flex-col justify-between text-white"
                   >
-                    <p></p>
+                    <p className="text-pretty line-clamp-4 text-sm">
+                      {e.title}
+                    </p>
+                    <p className="text-tiny">{e.date} 개정</p>
                   </div>
                 );
               })}
             </div>
           </div>
         </div>
-        <div className="flex-col grid gap-2">
-          <p className="font-bold text-primary text-lg px-4">
-            최근에 추가된 장비
-          </p>
+        <div className="flex-col grid gap-1 w-full">
+          <div className="flex flex-row w-full justify-between items-center">
+            <p className="font-bold  text-lg px-4 text-primary">
+              최근 추가된 장비
+            </p>
+            <Button variant={"light"} disableRipple color={"secondary"}>
+              더 보기
+            </Button>
+          </div>
           <div className="flex flex-col gap-2 overflow-auto px-4 scrollbar-hide">
             <div className="flex gap-4 whitespace-nowrap w-fit pb-4">
-              {[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5].map((e, i) => {
+              {[1, 2, 3, 4, 5].map((e, i) => {
                 return (
                   <div
                     key={i}

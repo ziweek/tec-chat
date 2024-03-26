@@ -35,7 +35,7 @@ export default function TextBubble(props: propsForTextBubble) {
           <TypeAnimation
             sequence={[props.text]}
             wrapper="span"
-            speed={25}
+            speed={50}
             repeat={1}
             cursor={false}
           />
