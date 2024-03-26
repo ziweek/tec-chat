@@ -12,7 +12,7 @@ import { Button, ButtonGroup } from "@nextui-org/react";
 export default function FooterTray() {
   const router = useRouter();
   return (
-    <div className="w-full h-fit gap-6 flex flex-col bg-white rounded-t-2xl pt-4">
+    <div className="w-full h-fit gap-4 flex flex-col bg-white rounded-t-2xl pt-4">
       <div className="flex flex-row w-full justify-center items-center gap-2 px-4">
         {[
           {
@@ -32,6 +32,9 @@ export default function FooterTray() {
               variant={"solid"}
               color={"secondary"}
               className="min-w-[100px] h-fit w-full py-1"
+              onPress={() => {
+                router.push("/chatbot");
+              }}
             >
               <div className="flex flex-row w-full h-fit items-center gap-2 justify-center p-1">
                 {e.icon}
@@ -41,7 +44,7 @@ export default function FooterTray() {
           );
         })}
       </div>
-      <div className="flex flex-row w-full justify-between h-fit px-4 pb-6">
+      <div className="flex flex-row w-full justify-between h-fit px-4 pb-8">
         {[
           {
             text: "홈",
