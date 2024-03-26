@@ -77,7 +77,9 @@ export default function Home() {
                     key={i}
                     className="bg-white shadow-md rounded-lg w-[200px] h-[120px] p-4 shadow-black-90"
                   >
-                    <p className=" line-clamp-4 text-sm w-full">{e.text}</p>
+                    <p className="line-clamp-4 text-sm w-full whitespace-normal text-pretty break">
+                      {e.text}
+                    </p>
                   </div>
                 );
               })}
@@ -122,7 +124,9 @@ export default function Home() {
                     key={i}
                     className="bg-secondary shadow-md rounded-lg w-[120px] h-[150px] p-4 shadow-black-90 flex flex-col justify-between text-white"
                   >
-                    <p className=" line-clamp-4 text-sm w-full">{e.title}</p>
+                    <p className="line-clamp-4 text-sm w-full whitespace-normal text-pretty break">
+                      {e.title}
+                    </p>
                     <p className="text-tiny">{e.date} 개정</p>
                   </div>
                 );
