@@ -6,7 +6,7 @@ import { Suspense, useEffect } from "react";
 import { OrbitControls, Environment, Clone } from "@react-three/drei";
 import { useGLTF } from "@react-three/drei";
 
-const Models = [{ name: "k9", url: "/models/scene.glb" }];
+const Models = [{ name: "k9", url: "/models/k9.glb" }];
 
 const Model = ({ url }: any) => {
   const { scene }: any = useGLTF(url);
