@@ -7,34 +7,31 @@ import {
   IconPhone,
   IconVoiceChat,
 } from "@/components/common/icons";
-import { Button } from "@nextui-org/react";
+import { Button, ButtonGroup } from "@nextui-org/react";
 
 export default function FooterTray() {
   const router = useRouter();
   return (
-    <div className="w-full h-fit gap-2 flex flex-col">
-      <div className="flex flex-row w-full justify-center items-center gap-2">
+    <div className="w-full h-fit gap-6 flex flex-col bg-white rounded-t-2xl pt-4">
+      <div className="flex flex-row w-full justify-center items-center gap-2 px-4">
         {[
           {
-            text: "텍스트",
-            icon: <IconChat fill="#fff" width={25}></IconChat>,
+            text: "카메라로 질문하기",
+            icon: <IconCamera fill="#fff" height={25}></IconCamera>,
           },
           {
-            text: "카메라",
-            icon: <IconCamera fill="#fff" width={25}></IconCamera>,
-          },
-          {
-            text: "음성인식",
-            icon: <IconVoiceChat fill="#fff" width={25}></IconVoiceChat>,
+            text: "음성 인식으로 질문하기",
+            icon: <IconVoiceChat fill="#fff" height={25}></IconVoiceChat>,
           },
         ].map((e, i) => {
           return (
             <Button
+              size={"sm"}
               isIconOnly
               key={i}
-              variant={"shadow"}
+              variant={"solid"}
               color={"secondary"}
-              className="min-w-[100px] h-fit"
+              className="min-w-[100px] h-fit w-full py-1"
             >
               <div className="flex flex-row w-full h-fit items-center gap-2 justify-center p-1">
                 {e.icon}
@@ -44,7 +41,7 @@ export default function FooterTray() {
           );
         })}
       </div>
-      <div className="flex flex-row w-full justify-between h-fit px-4 bg-white rounded-t-2xl py-4 pb-6 shadow-black shadow-lg">
+      <div className="flex flex-row w-full justify-between h-fit px-4 pb-6">
         {[
           {
             text: "홈",
@@ -53,7 +50,7 @@ export default function FooterTray() {
           },
           {
             text: "챗봇",
-            src: "/chat",
+            src: "/chatbot",
             icon: <IconChat height={25} fill="#0C2F1D"></IconChat>,
           },
           {
