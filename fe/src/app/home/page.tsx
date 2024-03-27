@@ -5,20 +5,16 @@ import { useRouter } from "next/navigation";
 import { Button } from "@nextui-org/react";
 import Header from "@/components/common/header";
 import { useIsMobile } from "@/hooks/useMediaQuery";
-import {
-  IconChat,
-  IconHome,
-  IconPerson,
-  IconPhone,
-} from "@/components/common/icons";
 import FooterTray from "@/components/common/footer-tray";
 import Image from "next/image";
+import ModalChatbot from "@/components/chatbot-modal";
 
 export default function Home() {
   //
   const router = useRouter();
   const isMobile = useIsMobile();
   const [mobile, setMobile] = useState<boolean>(false);
+  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
 
   const checkResize = () => {
     if (isMobile) {
@@ -181,11 +177,15 @@ export default function Home() {
       </div>
       {/*  */}
       <div className="fixed w-full bottom-0">
-        <FooterTray></FooterTray>
+        <FooterTray setIsModalVisible={setIsModalVisible}></FooterTray>
       </div>
       <div className="opacity-0">
-        <FooterTray></FooterTray>
+        <FooterTray setIsModalVisible={setIsModalVisible}></FooterTray>
       </div>
+      <ModalChatbot
+        isModalVisible={isModalVisible}
+        setIsModalVisible={setIsModalVisible}
+      ></ModalChatbot>
     </section>
   );
 }
