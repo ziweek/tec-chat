@@ -86,7 +86,7 @@ export default function ModalChatbot(props: propsForModal) {
         <div
           className={`${
             mobile ? "pb-4" : ""
-          } flex flex-col justify-start h-full w-full `}
+          } flex flex-col justify-start h-full w-full items-center`}
           style={{
             display: "grid",
             gridTemplateRows: "auto 1fr auto",
@@ -97,7 +97,7 @@ export default function ModalChatbot(props: propsForModal) {
           <ModalHeader className="flex flex-col border-b-2">
             교범 챗봇과 대화하기
           </ModalHeader>
-          <div className="overflow-y-scroll px-4 h-full py-4">
+          <div className="overflow-y-scroll px-4 h-full py-4 w-full flex flex-col items-center">
             {dialogContext.map((e, i) => {
               return (
                 <TextBubble
@@ -115,12 +115,14 @@ export default function ModalChatbot(props: propsForModal) {
             })}
             <div ref={messageEndRef} className="h-[100px]"></div>
           </div>
-          <FooterTray
-            dialogContext={dialogContext}
-            setDialogContext={setDialogContext}
-            showInput
-            setIsModalVisible={props.setIsModalVisible}
-          ></FooterTray>
+          <div className="w-full flex flex-col items-center">
+            <FooterTray
+              dialogContext={dialogContext}
+              setDialogContext={setDialogContext}
+              showInput
+              setIsModalVisible={props.setIsModalVisible}
+            ></FooterTray>
+          </div>
         </div>
       </ModalContent>
     </Modal>

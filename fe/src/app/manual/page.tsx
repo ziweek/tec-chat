@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <section
-      className="flex flex-col items-center justify-start w-full min-h-screen gap-4 max-w-[1024px] mx-auto bg-primary-50"
+      className="flex flex-col items-center justify-start w-full min-h-screen gap-4 max-w-[400px] mx-auto bg-primary-50"
       style={{
         display: "grid",
         gridTemplateRows: "auto 1fr auto auto",
@@ -79,6 +79,9 @@ export default function Home() {
                   <div
                     key={i}
                     className="bg-secondary shadow-md rounded-lg w-[120px] h-[150px] p-4 shadow-black-90 flex flex-col justify-between text-white"
+                    onClick={() => {
+                      router.push("/manual/detail");
+                    }}
                   >
                     <p className="line-clamp-4 text-sm w-full whitespace-normal text-pretty">
                       {e.title}
@@ -128,6 +131,9 @@ export default function Home() {
                   <div
                     key={i}
                     className="bg-secondary shadow-md rounded-lg w-[120px] h-[150px] p-4 shadow-black-90 flex flex-col justify-between text-white"
+                    onClick={() => {
+                      router.push("/manual/detail");
+                    }}
                   >
                     <p className="line-clamp-4 text-sm w-full whitespace-normal text-pretty">
                       {e.title}
@@ -167,6 +173,9 @@ export default function Home() {
                   <div
                     key={i}
                     className="w-full h-[300px] bg-primary-50 p-4 rounded-lg"
+                    onClick={() => {
+                      router.push("/manual/detail");
+                    }}
                   >
                     <div
                       className="bg-secondary shadow-md rounded-lg w-[100px]
