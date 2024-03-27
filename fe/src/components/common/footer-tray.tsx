@@ -57,7 +57,7 @@ export default function FooterTray(props: any) {
   }, [isMobile]);
 
   return (
-    <div className="w-full h-fit gap-4 flex flex-col bg-white rounded-t-2xl pt-4">
+    <div className="w-full h-fit gap-4 flex flex-col bg-white rounded-t-2xl pt-4 max-w-[400px]">
       <div className="flex flex-row w-full justify-center items-center gap-2 px-4">
         {[
           {
@@ -128,7 +128,7 @@ export default function FooterTray(props: any) {
         })}
       </div>
       {props.showInput ? (
-        <div className="flex flex-row w-full justify-between h-fit pb-8 px-4">
+        <div className="flex flex-row w-full justify-between h-fit pb-4 px-4">
           <Input
             placeholder={"질의어를 입력하세요."}
             className="w-full"
@@ -189,7 +189,7 @@ export default function FooterTray(props: any) {
           ></Input>
         </div>
       ) : (
-        <div className="flex flex-row w-full justify-between h-fit pb-8">
+        <div className="flex flex-row w-full justify-between h-fit pb-8 gap-4 px-2">
           {[
             {
               text: "홈",
@@ -235,7 +235,7 @@ export default function FooterTray(props: any) {
                 className="w-full h-[60px]"
                 variant={i == 2 ? "flat" : "light"}
                 size={"sm"}
-                radius={"full"}
+                // radius={"full"}
                 color={"primary"}
                 onPress={e.onPress}
               >

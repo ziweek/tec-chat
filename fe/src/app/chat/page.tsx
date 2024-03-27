@@ -166,7 +166,7 @@ export default function Home() {
           <div className="w-full h-full min-h-[400px] flex flex-col justify-stretch">
             {selectedEquipmentValue == "K-9" ? (
               <div className="h-full w-full rounded-xl overflow-clip drop-shadow-md">
-                <ThreeRender></ThreeRender>
+                <ThreeRender src={"/models/k9.glb"}></ThreeRender>
               </div>
             ) : (
               <div className="relative border-2 rounded-xl border-primary flex flex-col justify-center items-center h-full w-full drop-shadow-md">

@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <section
-      className="flex flex-col items-center justify-start w-full min-h-screen gap-4 max-w-[1024px] mx-auto bg-primary-50"
+      className="flex flex-col items-center justify-start w-full min-h-screen gap-4 max-w-[400px] mx-auto bg-primary-50"
       style={{
         display: "grid",
         gridTemplateRows: "auto 1fr auto auto",
@@ -156,7 +156,7 @@ export default function Home() {
                 return (
                   <div
                     key={i}
-                    className="bg-white shadow-md rounded-lg w-[75vw] h-[75vw] p-4 shadow-black-90 relative"
+                    className="bg-white shadow-md rounded-lg w-[300px] h-[300px] p-4 shadow-black-90 relative"
                   >
                     <p className="line-clamp-4 text-md w-full whitespace-normal text-pretty absolute top-4 left-4">
                       {e.name}
