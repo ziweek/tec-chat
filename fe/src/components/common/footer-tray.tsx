@@ -8,8 +8,8 @@ import {
   IconPhone,
   IconVoiceChat,
 } from "@/components/common/icons";
-import { Button, Tooltip, Input } from "@nextui-org/react";
-import { useState, useEffect, useRef, useMemo } from "react";
+import { Button, Tooltip, Input, CircularProgress } from "@nextui-org/react";
+import { useState, useEffect, useRef } from "react";
 import Webcam from "react-webcam";
 
 import { useIsMobile } from "@/hooks/useMediaQuery";
@@ -29,18 +29,7 @@ export default function FooterTray(props: any) {
   const isMobile = useIsMobile();
   const [mobile, setMobile] = useState<boolean>(false);
   const [inputText, setInputText] = useState("");
-  const messageEndRef = useRef<HTMLDivElement | null>(null);
   const webcamRef = useRef<any>(null);
-  // const [dialogContext, setDialogContext] = useState([
-  //   {
-  //     isAnimated: true,
-  //     isSent: false,
-  //     isLoading: false,
-  //     imgSrc: "/images/logo.png",
-  //     name: "테크_챗",
-  //     text: "안녕하세요! 저는 누구누구 입니다.",
-  //   },
-  // ]);
   const [isTooltipOpen, setIsTooltipOpen] = useState<boolean>(false);
   const [indexOfTooltip, setindexOfTooltip] = useState<number | undefined>(
     undefined
@@ -76,12 +65,12 @@ export default function FooterTray(props: any) {
             icon: <IconCamera fill="#fff" height={25}></IconCamera>,
             placement: "top-start",
             children: (
-              <>
-                {/* {!isWebCamLoaded && (
-                            <div className="flex flex-col justify-center items-center h-full">
-                              <CircularProgress></CircularProgress>
-                            </div>
-                          )} */}
+              <div className="h-full flex flex-col items-center justify-center gap-2 p-2">
+                {!isWebCamLoaded && (
+                  <div className="flex flex-col justify-center items-center h-full">
+                    <CircularProgress></CircularProgress>
+                  </div>
+                )}
                 <Webcam
                   ref={webcamRef}
                   audio={false}
@@ -96,7 +85,10 @@ export default function FooterTray(props: any) {
                   videoConstraints={videoConstraints}
                   className="rounded-2xl w-full h-full"
                 />
-              </>
+                <Button isIconOnly radius={"full"}>
+                  촬영하기
+                </Button>
+              </div>
             ),
           },
           {
@@ -112,7 +104,7 @@ export default function FooterTray(props: any) {
               showArrow={true}
               content={e.children}
               isOpen={isTooltipOpen && indexOfTooltip == i}
-              className="w-[300px] h-[300px]"
+              className="w-[300px] h-fit max-h-[500px]"
               placement={e.placement as any}
             >
               <Button
@@ -223,7 +215,7 @@ export default function FooterTray(props: any) {
             {
               text: "정비근무대",
               onPress: () => {
-                router.push("/");
+                router.push("/contact");
               },
               icon: <IconPhone height={25} fill="#0C2F1D"></IconPhone>,
             },
@@ -247,7 +239,7 @@ export default function FooterTray(props: any) {
                 color={"primary"}
                 onPress={e.onPress}
               >
-                <div className="flex flex-col items-center justify-center gap-1 h-full">
+                <div className="flex flex-col items-center justify-center gap-1 h-full text-tiny">
                   {e.icon}
                   {e.text}
                 </div>

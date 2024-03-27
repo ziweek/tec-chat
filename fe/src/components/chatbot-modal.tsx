@@ -41,6 +41,26 @@ export default function ModalChatbot(props: propsForModal) {
     checkResize();
   }, [isMobile]);
 
+  useEffect(() => {
+    if (dialogContext[dialogContext.length - 1].isSent == true) {
+      // setIsLoading(true);
+      const timer = setTimeout(() => {
+        // setIsLoading(false);
+        setDialogContext([
+          ...dialogContext,
+          {
+            isAnimated: true,
+            isSent: false,
+            isLoading: false,
+            imgSrc: "11",
+            name: "테크_챗",
+            text: "챗봇이 사용자의 발화에 응답하는 텍스트입니다. 본 기능은 아직 개발 중에 있으며, 2024년 4월 중으로 완성될 예정입니다.",
+          },
+        ]);
+      }, 500);
+    }
+  }, [dialogContext]);
+
   return (
     <Modal
       isOpen={props.isModalVisible}
@@ -86,7 +106,7 @@ export default function ModalChatbot(props: propsForModal) {
                   isLoading={false}
                   isAnimated={e.isAnimated}
                   isSent={e.isSent}
-                  imgSrc={e.imgSrc}
+                  imgSrc={"1"}
                   name={e.name}
                   text={e.text}
                   isLast={i == dialogContext.length - 1}
