@@ -59,14 +59,35 @@ export default function Home() {
             </Button>
           </div>
           <div className="flex flex-col gap-2 overflow-auto scrollbar-hide px-4">
-            <div className="grid grid-cols-2 gap-16 w-full items-center justify-center px-4">
-              {[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5].map((e, i) => {
+            <div className="grid grid-cols-2 gap-12 w-full items-center justify-center px-4">
+              {[
+                "기계정비대",
+                "차량정비대",
+                "전차수리대",
+                "통신장비정비대",
+                "무기수리대",
+                "항공기정비대",
+                "병기수리대",
+                "기관총정비대",
+                "장비수리대",
+                "로봇정비대",
+                "특수장비수리대",
+                "전투차량정비대",
+                "헬기정비대",
+                "선박수리대",
+                "방위장비수리대",
+                "의료장비정비대",
+                "군수정비대",
+                "발사체수리대",
+                "자동화장비수리대",
+                "전자장비정비대",
+              ].map((e, i) => {
                 return (
                   <div key={i} className="flex flex-col gap-1 items-center">
                     <div className="bg-secondary shadow-md rounded-full w-[75px] h-[75px] p-4 shadow-black-90 flex flex-col justify-between text-white">
                       <IconProfile fill="#ffffff"></IconProfile>
                     </div>
-                    <p className="text-tiny">{e}</p>
+                    <p className="text-sm">{e}</p>
                   </div>
                 );
               })}
@@ -84,30 +105,20 @@ export default function Home() {
             </Button>
           </div>
           <div className="flex flex-col gap-2 overflow-auto scrollbar-hide px-4">
-            <div className="flex gap-4 whitespace-nowrap w-fit pb-4">
+            <div className="flex gap-8 whitespace-nowrap w-fit pb-4">
               {[
-                {
-                  name: "통신정비반",
-                },
-                {
-                  name: "K200 정비반",
-                },
-                {
-                  name: "K-2 정비반",
-                },
-                {
-                  name: "K-9 정비반",
-                },
-                {
-                  name: "K-9 정비반",
-                },
+                "전투차량정비대",
+                "헬기정비대",
+                "선박수리대",
+                "방위장비수리대",
+                "의료장비정비대",
               ].map((e, i) => {
                 return (
                   <div key={i} className="flex flex-col gap-1 items-center">
-                    <div className="bg-secondary shadow-md rounded-full w-[75px] h-[75px] p-4 shadow-black-90 flex flex-col justify-between text-white">
+                    <div className="bg-secondary shadow-md rounded-full w-[60px] h-[60px] p-4 shadow-black-90 flex flex-col justify-between text-white">
                       <IconProfile fill="#ffffff"></IconProfile>
                     </div>
-                    <p className="text-tiny">{e.name}</p>
+                    <p className="text-tiny">{e}</p>
                   </div>
                 );
               })}
@@ -158,10 +169,16 @@ export default function Home() {
       </div>
       {/*  */}
       <div className="fixed w-full bottom-0">
-        <FooterTray setIsModalVisible={setIsModalVisible}></FooterTray>
+        <FooterTray
+          setIsModalVisible={setIsModalVisible}
+          indexOfButton={3}
+        ></FooterTray>
       </div>
       <div className="opacity-0">
-        <FooterTray setIsModalVisible={setIsModalVisible}></FooterTray>
+        <FooterTray
+          setIsModalVisible={setIsModalVisible}
+          indexOfButton={3}
+        ></FooterTray>
       </div>
       <ModalChatbot
         isModalVisible={isModalVisible}

@@ -157,6 +157,9 @@ export default function Home() {
                   <div
                     key={i}
                     className="bg-white shadow-md rounded-lg w-[300px] h-[300px] p-4 shadow-black-90 relative"
+                    onClick={() => {
+                      router.push("/manual/detail");
+                    }}
                   >
                     <p className="line-clamp-4 text-md w-full whitespace-normal text-pretty absolute top-4 left-4">
                       {e.name}
@@ -177,10 +180,16 @@ export default function Home() {
       </div>
       {/*  */}
       <div className="fixed w-full bottom-0">
-        <FooterTray setIsModalVisible={setIsModalVisible}></FooterTray>
+        <FooterTray
+          setIsModalVisible={setIsModalVisible}
+          indexOfButton={0}
+        ></FooterTray>
       </div>
       <div className="opacity-0">
-        <FooterTray setIsModalVisible={setIsModalVisible}></FooterTray>
+        <FooterTray
+          setIsModalVisible={setIsModalVisible}
+          indexOfButton={0}
+        ></FooterTray>
       </div>
       <ModalChatbot
         isModalVisible={isModalVisible}

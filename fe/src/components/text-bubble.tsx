@@ -38,6 +38,7 @@ export default function TextBubble(props: propsForTextBubble) {
             speed={50}
             repeat={1}
             cursor={false}
+            style={{ whiteSpace: "pre-line" }}
           />
         ) : (
           <p>{props.text}</p>

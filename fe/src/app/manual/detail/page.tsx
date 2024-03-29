@@ -159,10 +159,16 @@ export default function Home() {
       </div>
       {/*  */}
       <div className="fixed w-full bottom-0">
-        <FooterTray setIsModalVisible={setIsModalVisible}></FooterTray>
+        <FooterTray
+          setIsModalVisible={setIsModalVisible}
+          indexOfButton={1}
+        ></FooterTray>
       </div>
       <div className="opacity-0">
-        <FooterTray setIsModalVisible={setIsModalVisible}></FooterTray>
+        <FooterTray
+          setIsModalVisible={setIsModalVisible}
+          indexOfButton={1}
+        ></FooterTray>
       </div>
       <ModalChatbot
         isModalVisible={isModalVisible}

@@ -54,26 +54,11 @@ export default function Home() {
           <div className="flex flex-col gap-2 overflow-auto scrollbar-hide px-4">
             <div className="flex gap-4 whitespace-nowrap w-fit pb-4">
               {[
-                {
-                  title: "현무-4 탄도미사일의 운용 및 유지보수 절차",
-                  date: "2024.03.01",
-                },
-                {
-                  title: "K2 전차의 전투 전략 및 기술적 특성에 관한 교범",
-                  date: "2023.05.15",
-                },
-                {
-                  title: "무인정찰기의 운용 방법 및 기술적 특성에 관한 교범",
-                  date: "2023.07.28",
-                },
-                {
-                  title: "통신장비 운용에 대한 교범 개정안",
-                  date: "2024.02.21",
-                },
-                {
-                  title: "K-9 자주포 현가장치 부분 조정에 관한 교범",
-                  date: "2023.11.03",
-                },
+                "전투기병 교범",
+                "지휘통제 교범",
+                "작전전술 교범",
+                "생존전투 교범",
+                "병력행동 교범",
               ].map((e, i) => {
                 return (
                   <div
@@ -84,9 +69,8 @@ export default function Home() {
                     }}
                   >
                     <p className="line-clamp-4 text-sm w-full whitespace-normal text-pretty">
-                      {e.title}
+                      {e}
                     </p>
-                    <p className="text-tiny">{e.date} 개정</p>
                   </div>
                 );
               })}
@@ -190,10 +174,16 @@ export default function Home() {
       </div>
       {/*  */}
       <div className="fixed w-full bottom-0">
-        <FooterTray setIsModalVisible={setIsModalVisible}></FooterTray>
+        <FooterTray
+          setIsModalVisible={setIsModalVisible}
+          indexOfButton={1}
+        ></FooterTray>
       </div>
       <div className="opacity-0">
-        <FooterTray setIsModalVisible={setIsModalVisible}></FooterTray>
+        <FooterTray
+          setIsModalVisible={setIsModalVisible}
+          indexOfButton={1}
+        ></FooterTray>
       </div>
       <ModalChatbot
         isModalVisible={isModalVisible}
