@@ -1,3 +1,5 @@
+"use client";
+
 import { useRouter } from "next/navigation";
 import {
   IconBook,
@@ -12,9 +14,13 @@ import { Button, Tooltip, Input, CircularProgress } from "@nextui-org/react";
 import { useState, useEffect, useRef } from "react";
 import Webcam from "react-webcam";
 
+import "regenerator-runtime";
+import SpeechRecognition, {
+  useSpeechRecognition,
+} from "react-speech-recognition";
+
 import { useIsMobile } from "@/hooks/useMediaQuery";
-import { useQuery } from "@tanstack/react-query";
-import TextBubble from "@/components/text-bubble";
+
 import Dictaphone from "@/components/dictaphone";
 
 type propsForFooterTray = {
@@ -37,6 +43,24 @@ export default function FooterTray(props: any) {
 
   const [isWebCamLoaded, setIsWebCamLoaded] = useState<boolean>(false);
 
+  const {
+    transcript,
+    listening,
+    resetTranscript,
+    browserSupportsSpeechRecognition,
+  } = useSpeechRecognition();
+
+  if (!browserSupportsSpeechRecognition) {
+    return <span>Browser does not support speech recognition.</span>;
+  }
+  const toggleListening = () => {
+    if (listening) {
+      SpeechRecognition.stopListening();
+    } else {
+      SpeechRecognition.startListening({ language: "ko-KR", continuous: true });
+    }
+  };
+
   const videoConstraints = {
     width: 1280,
     height: 1280,
@@ -44,17 +68,17 @@ export default function FooterTray(props: any) {
     aspectRatio: 1,
   };
 
-  const checkResize = () => {
-    if (isMobile) {
-      setMobile(true);
-    } else {
-      setMobile(false);
-    }
-  };
+  // const checkResize = () => {
+  //   if (isMobile) {
+  //     setMobile(true);
+  //   } else {
+  //     setMobile(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    checkResize();
-  }, [isMobile]);
+  // useEffect(() => {
+  //   checkResize();
+  // }, [isMobile]);
 
   return (
     <div className="w-full h-fit gap-4 flex flex-col bg-white rounded-t-2xl pt-4 max-w-[400px]">
@@ -65,7 +89,7 @@ export default function FooterTray(props: any) {
             icon: <IconCamera fill="#fff" height={25}></IconCamera>,
             placement: "top-start",
             children: (
-              <div className="h-full flex flex-col items-center justify-center gap-2 p-2">
+              <div className="flex flex-col items-center justify-center gap-2 p-2 h-[350px]">
                 {!isWebCamLoaded && (
                   <div className="flex flex-col justify-center items-center h-full">
                     <CircularProgress></CircularProgress>
@@ -85,9 +109,7 @@ export default function FooterTray(props: any) {
                   videoConstraints={videoConstraints}
                   className="rounded-2xl w-full h-full"
                 />
-                <Button isIconOnly radius={"full"}>
-                  촬영하기
-                </Button>
+                <Button radius={"full"}>촬영하기</Button>
               </div>
             ),
           },
@@ -95,7 +117,30 @@ export default function FooterTray(props: any) {
             text: "음성 인식으로 질문하기",
             icon: <IconVoiceChat fill="#fff" height={25}></IconVoiceChat>,
             placement: "top-end",
-            children: <Dictaphone></Dictaphone>,
+            children: (
+              <div className="flex flex-col items-center justify-between gap-2 p-2 h-[350px]">
+                <p className="text-lg">{transcript}</p>
+                <div className="flex flex-col gap-2 items-center justify-center">
+                  <p>Microphone: {listening ? "on" : "off"}</p>
+                  <div className="flex-row flex items-center gap-2">
+                    <Button onClick={() => toggleListening()} color={"success"}>
+                      인식하기
+                    </Button>
+                    <Button onClick={resetTranscript}>초기화</Button>
+                    <Button
+                      onClick={SpeechRecognition.stopListening}
+                      color={"primary"}
+                      onPress={() => {
+                        setIsTooltipOpen(!isTooltipOpen);
+                        props.setIsModalVisible(!props.isModalVisible);
+                      }}
+                    >
+                      질문하기
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            ),
           },
         ].map((e, i) => {
           return (
@@ -189,42 +234,42 @@ export default function FooterTray(props: any) {
           ></Input>
         </div>
       ) : (
-        <div className="flex flex-row w-full justify-between h-fit pb-8 gap-4 px-2">
+        <div className="flex flex-row w-full justify-between h-fit pb-6 gap-2 px-2">
           {[
             {
               text: "홈",
               onPress: () => {
                 router.push("/home");
               },
-              icon: <IconHome height={25} fill="#0C2F1D"></IconHome>,
+              icon: <IconHome height={20} fill="#0C2F1D"></IconHome>,
             },
             {
               text: "전자교범",
               onPress: () => {
                 router.push("/manual");
               },
-              icon: <IconBook height={25} fill="#0C2F1D"></IconBook>,
+              icon: <IconBook height={20} fill="#0C2F1D"></IconBook>,
             },
             {
               text: "테크챗봇",
               onPress: () => {
                 props.setIsModalVisible(true);
               },
-              icon: <IconChat height={25} fill="#0C2F1D"></IconChat>,
+              icon: <IconChat height={20} fill="#fff"></IconChat>,
             },
             {
               text: "정비근무대",
               onPress: () => {
                 router.push("/contact");
               },
-              icon: <IconPhone height={25} fill="#0C2F1D"></IconPhone>,
+              icon: <IconPhone height={20} fill="#0C2F1D"></IconPhone>,
             },
             {
               text: "내 정보",
               onPress: () => {
                 router.push("/");
               },
-              icon: <IconPerson height={25} fill="#0C2F1D"></IconPerson>,
+              icon: <IconPerson height={20} fill="#0C2F1D"></IconPerson>,
             },
           ].map((e, i) => {
             return (
@@ -232,14 +277,23 @@ export default function FooterTray(props: any) {
                 disableRipple
                 key={i}
                 isIconOnly
-                className="w-full h-[60px]"
-                variant={i == 2 ? "flat" : "light"}
+                className="h-[50px] w-[55px]"
+                variant={
+                  i == 2
+                    ? "shadow"
+                    : i == props.indexOfButton
+                    ? "flat"
+                    : "light"
+                }
+                radius={i == props.indexOfButton ? "md" : "md"}
                 size={"sm"}
                 // radius={"full"}
                 color={"primary"}
-                onPress={e.onPress}
+                onPress={() => {
+                  e.onPress();
+                }}
               >
-                <div className="flex flex-col items-center justify-center gap-1 h-full text-tiny">
+                <div className="flex flex-col items-center justify-center gap-1 h-full text-[0.65rem]">
                   {e.icon}
                   {e.text}
                 </div>
