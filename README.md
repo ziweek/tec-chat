@@ -85,7 +85,11 @@
 > - 본 아이디어는, LLM(대규모 언어 모델)을 활용한 지능형 챗봇 서비스를 개발하여, 기존의 책자형 야전교범의 단점을 극복하고 군사장비의 운용부터 기능고장 발생시까지 필요한 솔루션을 신속하고 정확하게 도출할 수 있는 지능형 전자교범 플랫폼을 연구 및 개발하는 것입니다.
 
 
-https://github.com/ziweek/desirable-sea/assets/99459331/4a7edb47-754c-47fd-8dab-7d2adbb045ec
+
+https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e887ddad
+
+
+
 
 <table>
   <tr>
@@ -135,7 +139,7 @@ https://github.com/ziweek/desirable-sea/assets/99459331/4a7edb47-754c-47fd-8dab-
 > - [x] 기획안 작성 완료 :ok_hand:
 > - [x] 프론트엔드 개발 완료 :ok_hand:
 > - [x] 벡엔드 개발 완료 :ok_hand:
-> - [x] 머신러닝 서버 개발 완료 :ok_hand:
+> - [x] LLM 서버 개발 완료 :ok_hand:
 > - [x] 데이터베이스 구축 완료 :ok_hand:
 > - [x] 소개자료 및 시연영상 제작 완료 :ok_hand:
 >
@@ -164,117 +168,49 @@ https://github.com/ziweek/desirable-sea/assets/99459331/4a7edb47-754c-47fd-8dab-
 <details >
  <summary><b>핵심기능</b></summary><br/>
 
-### 1. 초고해상도 이미지 개선 딥러닝 모델
+#### 1. 초고해상도 이미지 개선 딥러닝 모델
    
  <table>
-  <tr>
-     <td colspan=2>
-      <p align="center">1.1 초고해상도 이미지 개선 딥러닝 모델</p>
-    </td>
-  </tr>
    <tr>
      <td width="50%">
-      <img src="./src/comp-super-image-resolution.png" width="100%">
+      <img src="./src/func1.png" width="100%">
     </td>
     <td>
      <p align="left">데이터 전처리 과정에서 초고해상도 이미지 개선 딥러닝 모델을 원본 데이터에 적용하여 해상도를 크게 개선할 수 있었습니다.</p>
     </td>
   </tr>
 </table>
-<br/>
-<table>
-  <tr>
-     <td colspan=2>
-      <p align="center">1.2 초고해상도 이미지 개선 딥러닝 모델</p>
-    </td>
-  </tr>
-   <tr>
-    <td width="50%">
-
-     
-https://github.com/ziweek/desirable-sea/assets/99459331/2212ce20-bb1b-42f8-a97c-bebd22ce3fb3
-
-
-</td>
-     <td>
-      <p align="left">전처리된 데이터셋을 라벨링하였습니다. 이때, 사전학습된 모델을 활용하여 자동으로 식별하게 하였고, 아래와 같이 예외적인 경우에는 수작업을 병행하였습니다.</p>
-    </td>
-    </tr>
-</table>
-
 
 <br/>
 <br/>
 
-### 2. 소형 객체 탐지 딥러닝 모델
+#### 2. 소형 객체 탐지 딥러닝 모델
 
  <table>
-  <tr>
-     <td colspan=2>
-      <p align="center">2.1 객체 탐지 딥러닝 모델 도입</p>
-    </td>
-  </tr>
    <tr>
      <td width="50%">
-      <img src="./src/result.png" width="100%">
+      <img src="./src/func2.png" width="100%">
     </td>
     <td width="50%">
       <p align="left">데이터 전처리 과정에서 초고해상도 이미지 개선 딥러닝 모델을 원본 데이터에 적용하여 해상도를 크게 개선할 수 있었습니다.</p>
     </td>
   </tr>
 </table>
-<br/>
- <table>
-  <tr>
-     <td colspan=2>
-      <p align="center">2.2 WBF 앙상블 기법으로 성능 개선</p>
-    </td>
-  </tr>
-    <tr>
-     <td width="50%">
-      <img src="./src/comp-super-image-resolution.png" width="100%">
-    </td>
-     <td width="50%">
-      <p align="left">전처리된 데이터셋을 라벨링하였습니다. 이때, 사전학습된 모델을 활용하여 자동으로 식별하게 하였고, 아래와 같이 예외적인 경우에는 수작업을 병행하였습니다.</p>
-    </td>
-  </tr>
-</table>
 
 
 <br/>
 <br/>
 
 
-### 3. 사용자 경험
+#### 3. 사용자 편의 기능
 
  <table>
-  <tr>
-     <td colspan=2>
-      <p align="center">3.1 Google Map API를 활용한 UX 구현</p>
-    </td>
-  </tr>
    <tr>
      <td width="50%">
       <img src="./src/result.png" width="100%">
     </td>
     <td width="50%">
      <p align="left">데이터 전처리 과정에서 초고해상도 이미지 개선 딥러닝 모델을 원본 데이터에 적용하여 해상도를 크게 개선할 수 있었습니다.</p>
-    </td>
-  </tr>
-</table>
-<br/>
- <table>
-  <tr>
-     <td colspan=2>
-      <p align="center">3.2 반응형 UI 및 다크모드 지원으로 사용성 개선</p>
-    </td>
-  </tr>
-    <tr>
-     <td width="50%">
-      <img src="./src/comp-super-image-resolution.png" width="100%">
-    </td>
-     <td width="50%">
-      <p align="left">전처리된 데이터셋을 라벨링하였습니다. 이때, 사전학습된 모델을 활용하여 자동으로 식별하게 하였고, 아래와 같이 예외적인 경우에는 수작업을 병행하였습니다.</p>
     </td>
   </tr>
 </table>
@@ -289,232 +225,27 @@ https://github.com/ziweek/desirable-sea/assets/99459331/2212ce20-bb1b-42f8-a97c-
 <details >
   <summary><b>아키텍처</b></summary><br/>
 
-### 프로덕트 아키텍처
+#### 프로덕트 아키텍처
 
  <table>
   <tr>
-     <td colspan=2>
-      <p align="center">프로덕트 아키텍처</p>
+     <td>
+      <img width="100%" src="./src/ux-flow-chart.png">
     </td>
   </tr>
    <tr>
-     <td width="50%">
-      <img width="100%" src="./src/service-architecture.png">
-    </td>
     <td width="50%">
            <p align="left">본 프로젝트의 아키텍처는 데이터 전처리 수행 서버(초고해생도 이미지 개선 딥러닝 모델), 핵심 기능 수행 서버(소형 객체 식별 딥러닝 모델), 그리고 웹 어플리케이션(프론트엔드와 벡엔드 및 데이터베이스)으로 구성되어 있습니다.</p>
     </td>
   </tr>
 </table>
-<br/>
- <table>
-  <tr>
-     <td colspan=2>
-      <p align="center">프로덕트 아키텍처</p>
-    </td>
-  </tr>
-   <tr>
-     <td width="50%">
-      <img width="100%" src="./src/service-architecture.png">
-    </td>
-    <td width="50%">
-           <p align="left">본 프로젝트의 아키텍처는 데이터 전처리 수행 서버(초고해생도 이미지 개선 딥러닝 모델), 핵심 기능 수행 서버(소형 객체 식별 딥러닝 모델), 그리고 웹 어플리케이션(프론트엔드와 벡엔드 및 데이터베이스)으로 구성되어 있습니다.</p>
-    </td>
-  </tr>
-</table>
-
-
-<br/>
-<br/>
-
-
-### AI 아키텍처
-
-<table>
-  <tr>
-     <td colspan=2>
-      <p align="center">AI 아키텍처</p>
-    </td>
-  </tr>
-   <tr>
-     <td width="50%">
-      <img src="./src/comp-super-image-resolution.png" width="100%">
-    </td>
-    <td width="50%">
-     <p align="left">전처리된 데이터셋을 라벨링하였습니다. 이때, 사전학습된 모델을 활용하여 자동으로 식별하게 하였고, 아래와 같이 예외적인 경우에는 수작업을 병행하였습니다.</p>
-    </td>
-  </tr>
-</table>
-
-
 </details>
-
 
 <br/>
 <br/>
 
 
 
-<!--
-
-## 2.2 초고해상도 이미지 개선 모델
-
-<details >
-  <summary><b>디렉토리 구조</b></summary>
-  
-```
-ESRGAN
-├── LR                      # Pytorch 모델을 저장하는 폴더입니다.
-│   └── demo.png            # MVP 시연에 사용될 데모 이미지입니다.
-├── models
-│   ├── ...
-│   └── RRDB_ESRGAN_x4.pth  # 베이스라인 관련 코드입니다.
-├── ...
-└── results
-    └── demo_rlt.png        # 모델링 결과로 출력되는 이미지입니다.
-```
-</details>
-
-<details >
-  <summary><b>초기 설치방법</b></summary>
-
-1. setup.sh 파일 만들기.
-2. 아래의 쉘스크립트 복사 후 붙여넣기.
-3. 터미널에서 setup.sh 실행
-
-
-```shell
-
-git clone https://github.com/xinntao/ESRGAN
-cd ESRGAN
-
-cd models
-wget --load-cookies ~/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies ~/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1TPrz5QKd8DHHt1k8SRtm6tMiPjz_Qene' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1TPrz5QKd8DHHt1k8SRtm6tMiPjz_Qene" -O RRDB_ESRGAN_x4.pth && rm -rf ~/cookies.txt
-cd ..
-
-cd LR
-wget https://raw.githubusercontent.com/ziweek/desirable-sea/main/src/demo.png
-cd ..
-```
-</details>
-
-
-<details >
-  <summary><b>추론 실행방법</b></summary>
-
-1. 아래의 쉘스크립트 복사 후 터미널에 붙여넣기.
-2. 터미널에서 실행하기.
-3. 동일 디렉토리 내에서 result-resolution.jpg 파일 확인하기.
-
-```shell
-python test.py
-```
-
-
-<img src="./src/result.png">
-
-</details>
-
-## 2.3 소형 객체 인식 모델
-
-
-- 성능지표가 크게 개선됨. (mAP : 73.4 -> 78.9 )
-  <img src="./src/model-improvement.png" width="100%"/>
-- 기존의 결과값에 비해 정확도 및 신뢰도가 대폭 상승함. (ship 30% -> small vehicle 91%)
-  <img src="./src/dif-precision.png" width="100%"/>
-- 기존의 모델이 흰색 차량만을 식별했던 것과 달리 검은색, 검은색의 차량도 식별함.
-  <img src="./src/dif-color.png" width="100%"/>
-- 건물의 그림자가 걸쳐진 차량도 식별함.
-  <img src="./src/dif-shadow.png" width="100%"/>
-
-
-<details >
-  <summary><b>디렉토리 구조</b></summary>
-  
-```
-desirable-sea
-├── checkpoints  # Pytorch 모델을 저장하는 폴더입니다.
-├── mmrotate     # 베이스라인 관련 코드입니다.
-│   ├── config
-│   ├── ...
-│   └── demo
-├── ...
-├── demo.png     # MVP 시연에 사용될 데모 이미지입니다.
-└── result.jpg   # 모델링 결과로 출력되는 이미지입니다.
-```
-</details>
-
-<details >
-  <summary><b>초기 설치방법</b></summary>
-
-1. setup.sh 파일 만들기.
-2. 아래의 쉘스크립트 복사 후 붙여넣기.
-3. 터미널에서 setup.sh 실행
-
-```shell
-# this code is written in Linux.
-
-sudo apt update
-sudo apt -y install libgl1-mesa-glx
-
-wget https://repo.anaconda.com/miniconda/Miniconda3-py37_4.9.2-Linux-x86_64.sh
-chmod +x Miniconda3-py37_4.9.2-Linux-x86_64.sh
-bash ./Miniconda3-py37_4.9.2-Linux-x86_64.sh -b -f -p /usr/local
-which conda
-conda --version
-
-pip install torch==1.7.0+cu110 torchvision==0.8.1+cu110 torchaudio==0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
-pip install openmim --use-feature=2020-resolver
-mim install mmcv-full==1.5.3
-mim install mmdet==2.25.1
-
-git clone https://github.com/open-mmlab/mmrotate.git
-cd mmrotate
-pip install -r requirements/build.txt
-pip install -v -e .
-
-cd ..
-
-
-mkdir checkpoints
-cd checkpoints
-wget https://download.openmmlab.com/mmrotate/v0.1.0/redet/redet_re50_fpn_1x_dota_ms_rr_le90/redet_re50_fpn_1x_dota_ms_rr_le90-fc9217b5.pth
-cd ..
-
-wget https://raw.githubusercontent.com/ziweek/desirable-sea/main/src/demo.png
-
-```
-</details>
-
-
-<details >
-  <summary><b>추론 실행방법</b></summary>
-
-1. 아래의 쉘스크립트 복사 후 터미널에 붙여넣기.
-2. 터미널에서 실행하기.
-3. 동일 디렉토리 내에서 result.jpg 파일 확인하기.
-
-```shell
-python mmrotate/demo/image_demo.py demo.png mmrotate/configs/redet/redet_re50_refpn_1x_dota_ms_rr_le90.py checkpoints/redet_re50_fpn_1x_dota_ms_rr_le90-fc9217b5.pth --out-file result.jpg
-```
-
-
-<img src="./src/result.png">
-
-</details>
-
-## 2.4 웹 어플리케이션
-
-- 공공데이터 포털에서 제공하는 [제주특별자치도_주차장기본정보](https://www.data.go.kr/data/15099715/openapi.do) 사용함.
-  <img src="./src/public-api-data.png" width="100%"/>
-- 서버와 데이터베이스 연동
-  <img src="./src/server-doc.png" width="100%"/>
-- 반응형 UI 개발 완료 및 다크모드 지원
-  <img src="./src/darkmode.png" width="100%"/>
-- PWA(Progressive Web Apps) 지원 ([설치방법](https://github.com/ziweek/desirable-sea/tree/main?tab=readme-ov-file#pwa-%EC%84%A4%EC%B9%98%EB%B0%A9%EB%B2%95))
-  <img src="./src/ui-mobile.png"/>
-
--->
 
 # 3. 팀원
 
