@@ -209,7 +209,7 @@ https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e
  <table>
    <tr>
      <td width="50%">
-      <img src="./src/result.png" width="100%">
+      <img src="./src/func3.png" width="100%">
     </td>
     <td width="50%">
      <p align="left">데이터 전처리 과정에서 초고해상도 이미지 개선 딥러닝 모델을 원본 데이터에 적용하여 해상도를 크게 개선할 수 있었습니다.</p>
