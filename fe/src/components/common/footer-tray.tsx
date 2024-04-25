@@ -267,7 +267,7 @@ export default function FooterTray(props: any) {
             {
               text: "내 정보",
               onPress: () => {
-                router.push("/");
+                router.push("home");
               },
               icon: <IconPerson height={20} fill="#0C2F1D"></IconPerson>,
             },
