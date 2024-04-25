@@ -181,8 +181,9 @@ https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e
   </tr>
 </table>
 
+
 <br/>
-<br/>
+
 
 #### 2. 소형 객체 탐지 딥러닝 모델
 
@@ -198,7 +199,6 @@ https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e
 </table>
 
 
-<br/>
 <br/>
 
 
