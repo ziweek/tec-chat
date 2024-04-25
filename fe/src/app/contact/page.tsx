@@ -95,7 +95,7 @@ export default function Home() {
           </div>
         </div>
         {/*  */}
-        <Card className="flex-col grid gap-2 w-[92%] fixed z-20 bottom-44">
+        <Card className="flex-col grid gap-2 w-[92%] fixed z-20 bottom-44 max-w-[380px]">
           <div className="flex flex-row w-full justify-between items-center">
             <p className="font-bold  text-lg px-4 text-primary">
               최근 통화한 정비반
@@ -126,7 +126,7 @@ export default function Home() {
           </div>
         </Card>
         {/*  */}
-        <Card className="flex-col grid gap-1 w-full opacity-0">
+        <Card className="flex-col grid gap-1 w-full opacity-0 mx-auto">
           <div className="flex flex-row w-full justify-between items-center">
             <p className="font-bold  text-lg px-4 text-primary">
               최근 통화한 정비반

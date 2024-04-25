@@ -78,9 +78,7 @@ export default function Home() {
                 color={"primary"}
                 variant={"bordered"}
                 onClick={() => {
-                  router.push(
-                    "https://github.com/ziweek/the-art-of-presentation.git"
-                  );
+                  window.open("https://github.com/ziweek/tec-chat");
                 }}
               >
                 프로젝트 소개자료
@@ -135,7 +133,7 @@ export default function Home() {
                   className="mx-auto h-[120px] w-fit"
                 ></Image>
               ),
-              text: "sdf",
+              text: "자체적으로 구분된 독립적인 서버를 사용하여 보안 문제를 해결하기 위해 Ollama LLM 프레임워크를 활용하였습니다.",
             },
             {
               title: "에이전트 간 앙상블을 통한 정확도 개선",
@@ -145,7 +143,7 @@ export default function Home() {
                   <LottieEnsemble height={120} goTo={10}></LottieEnsemble>
                 </div>
               ),
-              text: "sdf",
+              text: " 다수의 에이전트 모델 간의 상호작용을 시키는 앙상블 기법을 활용하여 LLM 특유의 ‘할루시네이션’(환각) 현상을 최소화하고 경제적인 관점에서 최대한의 효율적인 성능을 확보한다.",
             },
             {
               title: "텍스트, 이미지, 음성 등 멀티모달 분석",
@@ -160,18 +158,18 @@ export default function Home() {
                   ></LottieVoiceRecognition>
                 </div>
               ),
-              text: "sdf",
+              text: "텍스트 질의 뿐만 아니라 카메라 또는 음성 인식 등의 멀티모달 인터페이스를 지원하여 사용자 편의성을 개선하였습니다.",
             },
 
             {
-              title: "군장비의 3D 모델을 통한 진단",
+              title: "군용장비의 3D 모델링으로 실증적 진단",
               gridArea: "d",
               img: (
                 <div className="mx-auto h-[120px] w-fit flex flex-col justify-center">
                   <Lottie3DModel goTo={30} height={120}></Lottie3DModel>
                 </div>
               ),
-              text: "sdf",
+              text: "blender 등의 소프트웨어로 작성된 3D 모델링 구조도를 통해 운용장비의 파트에 대해 직관적으로 접근할 수 있습니다.",
             },
           ].map((content, i) => {
             return (
@@ -187,9 +185,9 @@ export default function Home() {
                   </p>
                 </CardHeader>
                 <Divider></Divider>
-                <CardBody>
+                <CardBody className="gap-2 text-pretty">
                   {content.img}
-                  <p>{content.text}</p>
+                  <p className="leading-loose">{content.text}</p>
                 </CardBody>
               </Card>
             );
