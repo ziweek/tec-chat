@@ -5,8 +5,8 @@
 <p align="center">
  <!--
   <strong>🏆 2024 대한민국 육군창업경진대회 수상 작품 🏆</strong>
- -->
   <br/>
+  -->
   <br/>
   <a href='https://github.com/ziweek/desirable-sea/blob/main/README.md'>
     KOREAN
