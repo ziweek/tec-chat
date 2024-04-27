@@ -87,12 +87,12 @@ https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e
   <tr>
      <td>
       <p align='center'>
-        On-Premise 환경의 LLM 앙상블 구조
+        온프레미스 LLM 앙상블 구조
       </p>
     </td>
     <td>
       <p align='center'>
-       운용장비 구조도의 실시간 3D 렌더링
+       운용장비 실시간 3D 렌더링
       </p>
     </td>
     <td>
@@ -103,13 +103,13 @@ https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e
   </tr>
    <tr>
     <td>
-      <img src="./src/intro1.png"/>
+      <img src="./src/intro1.png" width="100%"/>
     </td>
     <td>
-      <img src="./src/intro2.png"/>
+      <img src="./src/intro2.png" width="100%"/>
     </td>
     <td>
-      <img src="./src/intro3.png"/>
+      <img src="./src/intro3.png" width="100%"/>
     </td>
   </tr>
 </table>
