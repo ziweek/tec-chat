@@ -102,13 +102,13 @@ https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e
     </td>
   </tr>
    <tr>
-    <td style="width:1/3;">
+    <td>
       <img src="./src/intro1.png"/>
     </td>
-    <td style="width:1/3;">
+    <td>
       <img src="./src/intro2.png"/>
     </td>
-    <td style="width:1/3;">
+    <td>
       <img src="./src/intro3.png"/>
     </td>
   </tr>
