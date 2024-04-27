@@ -23,34 +23,21 @@
   <br/>
   <br/>
 
-  <a href='https://paperswithcode.com/task/image-super-resolution'>
-    <img src="https://img.shields.io/badge/Paperswithcode-Image%20Super%20Resolution-25c2a0?style=flat-square"/>
+  <a href='https://ollama.com/'>
+    <img src="https://img.shields.io/badge/Env-Ollama-faf9f6?style=flat-square"/>
   </a>
-  <a href='https://github.com/XPixelGroup/HAT'>
-    <img src="https://img.shields.io/badge/XPixelGroup-HAT-EF2D5E?style=flat-square"/>
+  <a href='https://paperswithcode.com/paper/mistral-7b'>
+    <img src="https://img.shields.io/badge/Paperswithcode-Mistral%207B-25c2a0?style=flat-square"/>
   </a>
-  <a href='https://github.com/xinntao/ESRGAN?tab=readme-ov-file'>
-    <img src="https://img.shields.io/badge/Xintao-ESRGAN-EF2D5E?style=flat-square"/>
-  </a>
-  <img src="https://img.shields.io/badge/Weights%20&%20Biases-dea500?style=flat-square&logo=weightsandbiases&logoColor=white&text=white"/>
-  </br>
-  
-  <a href='https://paperswithcode.com/task/object-detection-in-aerial-images'>
-    <img src="https://img.shields.io/badge/Paperswithcode-Object%20Detection%20In%20Aerial%20Images-25c2a0?style=flat-square"/>
-  </a>
-  <a href='https://github.com/open-mmlab/mmrotate'>
-    <img src="https://img.shields.io/badge/OpenMMLab-MMRotate-EF2D5E?style=flat-square"/>
-  </a>
-  <a href='https://github.com/ZFTurbo/Weighted-Boxes-Fusion'>
-    <img src="https://img.shields.io/badge/Ensemble-Weighted%20Boxes%20Fusion-EF2D5E?style=flat-square"/>
+  <a href='https://paperswithcode.com/paper/gemma-open-models-based-on-gemini-research'>
+    <img src="https://img.shields.io/badge/Paperswithcode-Gemma-25c2a0?style=flat-square"/>
   </a>
   <br/>
-
+ 
   
   <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white"/>
   <img src="https://img.shields.io/badge/PWA-5A0FC8?style=flat-square&logo=pwa&logoColor=white"/> 
   <img src="https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white"/>
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
   <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white"/>
   <img src="https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white"/>
