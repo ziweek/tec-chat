@@ -1,5 +1,5 @@
-# 안녕, 테크_챗
- 
+# 안녕, 테크\_챗
+
 <img src="./src/banner_ko.png"/>
 
 <p align="center">
@@ -72,16 +72,11 @@
 # 1. 개요
 
 > [!NOTE]
+>
 > - 본 아이디어는, 대한민국 육군본부에서 주최하는 [2024 대한민국 육군창업경진대회](https://www.army-startup.co.kr/)에 출품한 프로젝트입니다.
->   
 > - 본 아이디어는, LLM(대규모 언어 모델)을 활용한 지능형 챗봇 서비스를 개발하여, 기존의 책자형 야전교범의 문제점을 극복하고 군사장비의 운용에 필요한 정보를 신속하고 정확하게 획득할 수 있는 지능형 전자교범 플랫폼을 연구 및 개발하는 것입니다.
 
-
-
 https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e887ddad
-
-
-
 
 <table>
   <tr>
@@ -118,13 +113,10 @@ https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e
 <br/>
 <br/>
 
-
-
-
 # 2. 프로덕트
 
-
 > [!IMPORTANT]
+>
 > <details> <summary><b>프로젝트 진행 현황</b></summary>
 > <br/>
 >
@@ -138,30 +130,30 @@ https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e
 > </details>
 
 > [!tip]
+>
 > <details> <summary><b>프로토타입 설치 방법</b></summary>
 > <br/>
 >
 > iOS에서 설치하는 방법:
 >
->  1. iOS 기기에서 Safari를 열고 [PWA가 호스팅된 URL](https://desirable-sea.vercel.app/)로 이동합니다.
->  2. 화면 하단에 있는 공유 아이콘을 탭합니다.
->  3. 화면을 아래로 스크롤하여 "홈 화면에 추가"를 탭합니다.
->  4. 우측 상단의 "추가"를 탭합니다.
+> 1.  iOS 기기에서 Safari를 열고 [PWA가 호스팅된 URL](https://desirable-sea.vercel.app/)로 이동합니다.
+> 2.  화면 하단에 있는 공유 아이콘을 탭합니다.
+> 3.  화면을 아래로 스크롤하여 "홈 화면에 추가"를 탭합니다.
+> 4.  우측 상단의 "추가"를 탭합니다.
 >
 > Android에서 설치하는 방법:
-> 
->  1. Android 기기에서 Chrome 브라우저를 열고 [PWA가 호스팅된 URL](https://desirable-sea.vercel.app/)로 이동합니다.
->  2. 화면 우측 상단의 세 점 메뉴를 탭합니다.
->  3. "홈 화면에 추가"를 탭합니다.
->  4. 우측 상단의 "추가"를 탭합니다.
+>
+> 1.  Android 기기에서 Chrome 브라우저를 열고 [PWA가 호스팅된 URL](https://desirable-sea.vercel.app/)로 이동합니다.
+> 2.  화면 우측 상단의 세 점 메뉴를 탭합니다.
+> 3.  "홈 화면에 추가"를 탭합니다.
+> 4.  우측 상단의 "추가"를 탭합니다.
 > </details>
-
 
 <details >
  <summary><b>핵심기능</b></summary><br/>
 
 #### 1. On-Premise 환경의 LLM 앙상블 구조
-   
+
  <table>
    <tr>
      <td width="50%">
@@ -173,9 +165,7 @@ https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e
   </tr>
 </table>
 
-
 <br/>
-
 
 #### 2. 운용장비 구조도의 실시간 3D 렌더링
 
@@ -185,14 +175,12 @@ https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e
       <img src="./src/func2.png" width="100%">
     </td>
     <td width="50%">
-      <p align="left">이 기능은 운용되는 장비의 구조도를 실시간으로 3D 렌더링하여 사용자에게 제공합니다. 이를 통해 사용자는 복잡한 장비 구조를 명확하게 이해할 수 있으며, 효율적으로 정비를 마칠 수 있습니다.</p>
+      <p align="left">이 기능은 운용되는 장비의 구조도를 실시간으로 3D 렌더링하여 사용자에게 제공합니다. 이를 통해 사용자는 복잡한 장비 구조를 명확하게 이해할 수 있으며, 효율적으로 정비를 마칠 수 있습니다.</p>
     </td>
   </tr>
 </table>
 
-
 <br/>
-
 
 #### 3. 멀티모달 지원으로 사용자 편의성 개선
 
@@ -210,9 +198,7 @@ https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e
 <br/>
 <br/>
 
-
 </details>
-
 
 <details >
   <summary><b>아키텍처</b></summary><br/>
@@ -236,47 +222,12 @@ https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e
 <br/>
 <br/>
 
-
-
-
 # 3. 팀원
 
-<table>
+ <table>
   <tr>
-    <td width=80>
-      <p align='center'>김지욱</p>
-    </td>
-    <td width=1=150>
-      <p align='center'>
-        <img src="https://drive.google.com/uc?export=view&id=1459-NPm4sC50nrQRdjTpmpz_eKunIi04" width=400/>
-        <a href='https://github.com/ziweek' target="_blank">
-          <img src="https://img.shields.io/badge/Github-000000?style=flat-square&logo=Github&logoColor=white"/>
-        </a>
-      </p>
-    </td>
-    <td>
-      <p align='left'>
-        이 프로젝트에 리더로 참여하여 먼저, 장기 방치 차량 문제에 직면해 이를 관리 하기 위한 지능형 플랫폼의 필요성을 깨닫게 되었습니다. Next.js, Google Map API, 그리고 FastAPI 등의 현대적인 기술들을 통합함으로써 우리의 솔루션은 효율적이고 사용자 친화적인 장기 방치 차량 관리를 실현하며, 위성데이터를 활용한 지능형 플랫폼의 발전에 일조하는 데 자부심을 느낄 수 있었습니다. 이 플랫폼은 제주의 차량문제를 혁신하고 미래 도시 계획에 기여하는 중요한 발판으로서의 역할을 할 것으로 기대됩니다.
-      </p>
-    </td>
-  </tr>
-  
-   <tr>
-    <td width=80>
-      <p align='center'>부선웅</p>
-    </td>
-    <td width=150>
-      <p align='center'>
-        <img src="https://drive.google.com/uc?export=view&id=1RXq9nhJ5xsv_tMCUZ4l6QwDeiyR1mtSD" width=400/>
-        <a href='https://github.com/Boo-seon-woong' target="_blank">
-          <img src="https://img.shields.io/badge/Github-000000?style=flat-square&logo=Github&logoColor=white"/>
-        </a>
-      </p>
-    </td>
-    <td>
-      <p align='left'>
-        CTO로 참여한 이 프로젝트는 최신 기술을 활용하여 제주의 장기 방치 차량 문제에 도전하는 흥미로운 경험이었습니다. 위성데이터와 딥러닝을 결합하여 차량을 정확하게 탐지하는 시스템을 개발하는 과정에서, 기술적인 도전과 혁신의 기회를 마주하게 되었습니다. 이 플랫폼은 미래 제주의 스마트한 지능형 시스템을 모색하는 데 있어 핵심적인 역할을 할 것으로 자부하고 있습니다.
-      </p>
+     <td>
+      <img width="100%" src="./src/team.png">
     </td>
   </tr>
 </table>
