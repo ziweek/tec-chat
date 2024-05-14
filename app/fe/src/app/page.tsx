@@ -46,7 +46,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="w-full h-full mx-auto min-h-full">
+    <section className="w-full h-full mx-auto min-h-full overflow-x-clip">
       {/* 1. 프로젝트 소개  */}
       <div className="flex h-screen flex-col items-center justify-center bg-black">
         <div
@@ -114,12 +114,17 @@ export default function Home() {
         </div>
         <div className="absolute  w-auto min-w-full min-h-full max-w-none h-full bg-black/75 z-10"></div>
         <video
-          autoPlay
-          loop
+          controls={false}
+          autoPlay={true}
+          loop={true}
           muted
-          className="absolute z-0 w-auto min-w-full h-full max-w-none"
+          className="absolute z-0 w-screen h-screen max-w-none overflow-clip object-cover"
         >
-          <source src={require("../../public/video/bg.mp4")} type="video/mp4" />
+          <source
+            src={require("../../public/video/bg.mp4")}
+            type="video/mp4"
+            className="w-screen h-screen"
+          />
           Your browser does not support the video tag.
         </video>
       </div>
