@@ -146,18 +146,18 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
-          style={
-            mobile
-              ? { gap: "20px" }
-              : {
-                  display: "grid",
-                  gridTemplateAreas: `"a b" "c d"`,
-                  gridTemplateColumns: "1fr 1fr",
-                  gridTemplateRows: "1fr",
-                  gap: "20px",
-                }
-          }
+        // className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
+        // style={
+        //   mobile
+        //     ? { gap: "20px" }
+        //     : {
+        //         display: "grid",
+        //         gridTemplateAreas: `"a b" "c d"`,
+        //         gridTemplateColumns: "1fr 1fr",
+        //         gridTemplateRows: "1fr",
+        //         gap: "20px",
+        //       }
+        // }
         >
           {[
             {
@@ -258,18 +258,18 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
-          style={
-            mobile
-              ? { gap: "20px" }
-              : {
-                  display: "grid",
-                  gridTemplateAreas: `"a b" "c d"`,
-                  gridTemplateColumns: "1fr 1fr",
-                  gridTemplateRows: "1fr",
-                  gap: "20px",
-                }
-          }
+        // className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
+        // style={
+        //   mobile
+        //     ? { gap: "20px" }
+        //     : {
+        //         display: "grid",
+        //         gridTemplateAreas: `"a b" "c d"`,
+        //         gridTemplateColumns: "1fr 1fr",
+        //         gridTemplateRows: "1fr",
+        //         gap: "20px",
+        //       }
+        // }
         >
           {[
             {
@@ -370,18 +370,18 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
-          style={
-            mobile
-              ? { gap: "20px" }
-              : {
-                  display: "grid",
-                  gridTemplateAreas: `"a b" "c d"`,
-                  gridTemplateColumns: "1fr 1fr",
-                  gridTemplateRows: "1fr",
-                  gap: "20px",
-                }
-          }
+        // className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
+        // style={
+        //   mobile
+        //     ? { gap: "20px" }
+        //     : {
+        //         display: "grid",
+        //         gridTemplateAreas: `"a b" "c d"`,
+        //         gridTemplateColumns: "1fr 1fr",
+        //         gridTemplateRows: "1fr",
+        //         gap: "20px",
+        //       }
+        // }
         >
           {[
             {
@@ -479,18 +479,18 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
-          style={
-            mobile
-              ? { gap: "20px" }
-              : {
-                  display: "grid",
-                  gridTemplateAreas: `"a b" "c d"`,
-                  gridTemplateColumns: "1fr 1fr",
-                  gridTemplateRows: "1fr",
-                  gap: "20px",
-                }
-          }
+          // className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
+          // style={
+          //   mobile
+          //     ? { gap: "20px" }
+          //     : {
+          //         display: "grid",
+          //         gridTemplateAreas: `"a b" "c d"`,
+          //         gridTemplateColumns: "1fr 1fr",
+          //         gridTemplateRows: "1fr",
+          //         gap: "20px",
+          //       }
+          // }
         >
           {[
             {
