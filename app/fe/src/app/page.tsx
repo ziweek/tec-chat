@@ -117,7 +117,8 @@ export default function Home() {
           controls={false}
           autoPlay={true}
           loop={true}
-          muted
+          muted={true}
+          playsInline={true}
           className="absolute z-0 w-screen h-screen max-w-none overflow-clip object-cover"
         >
           <source
@@ -192,7 +193,7 @@ export default function Home() {
               <Card
                 key={i}
                 data-aos={"fade-up"}
-                data-aos-delay={i * 250 + 250}
+                data-aos-delay={i * 100 + 100}
                 data-aos-anchor-placement="center-bottom"
                 data-aos-duration="500"
                 className="h-full w-full p-4 bg-secondary"
@@ -278,7 +279,7 @@ export default function Home() {
               <Card
                 key={i}
                 data-aos="fade-left"
-                data-aos-delay={i * 250 + 250}
+                data-aos-delay={i * 100 + 100}
                 data-aos-anchor-placement="center-bottom"
                 data-aos-duration="500"
                 className="h-full w-full p-4 bg-black"
@@ -361,7 +362,7 @@ export default function Home() {
               <Card
                 key={i}
                 data-aos="fade-right"
-                data-aos-delay={i * 250 + 250}
+                data-aos-delay={i * 100 + 100}
                 data-aos-anchor-placement="center-bottom"
                 data-aos-duration="500"
                 className="h-full w-full p-4 bg-[#A7CDA2]"
