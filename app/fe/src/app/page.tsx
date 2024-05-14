@@ -146,18 +146,19 @@ export default function Home() {
           </p>
         </div>
         <div
-        // className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
-        // style={
-        //   mobile
-        //     ? { gap: "20px" }
-        //     : {
-        //         display: "grid",
-        //         gridTemplateAreas: `"a b" "c d"`,
-        //         gridTemplateColumns: "1fr 1fr",
-        //         gridTemplateRows: "1fr",
-        //         gap: "20px",
-        //       }
-        // }
+          className="flex flex-col px-4 gap-4"
+          // className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4 gap-4"
+          // style={
+          //   mobile
+          //     ? { gap: "20px" }
+          //     : {
+          //         display: "grid",
+          //         gridTemplateAreas: `"a b" "c d"`,
+          //         gridTemplateColumns: "1fr 1fr",
+          //         gridTemplateRows: "1fr",
+          //         gap: "20px",
+          //       }
+          // }
         >
           {[
             {
@@ -174,32 +175,6 @@ export default function Home() {
               ),
               text: "테크챗에는 프롬프트를 필터링하는 별도의 sLLM 에이전트를 배치하여, 사용자의 악의적인 프롬프트에 대응하고 있습니다.",
             },
-          ].map((content, i) => {
-            return (
-              <Card
-                key={i}
-                data-aos={"fade-up"}
-                data-aos-delay={i * 100 + 100}
-                data-aos-anchor-placement="center-bottom"
-                data-aos-duration="750"
-                className="h-full w-full p-4 bg-secondary"
-                // style={{ gridArea: content.gridArea }}
-                shadow={"sm"}
-              >
-                <CardHeader>
-                  <p className="text-2xl font-bold whitespace-pre-line text-white">
-                    {content.title}
-                  </p>
-                </CardHeader>
-                {/* <Divider></Divider> */}
-                <CardBody className="gap-4 text-balance break-keep">
-                  <p className="text-white leading-relaxed">{content.text}</p>
-                  {content.img}
-                </CardBody>
-              </Card>
-            );
-          })}
-          {[
             {
               title: "적대적 프롬프트 주입 공격을\n필터링하는 sLLM 에이전트",
               // gridArea: "a",
@@ -258,18 +233,19 @@ export default function Home() {
           </p>
         </div>
         <div
-        // className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
-        // style={
-        //   mobile
-        //     ? { gap: "20px" }
-        //     : {
-        //         display: "grid",
-        //         gridTemplateAreas: `"a b" "c d"`,
-        //         gridTemplateColumns: "1fr 1fr",
-        //         gridTemplateRows: "1fr",
-        //         gap: "20px",
-        //       }
-        // }
+          className="flex flex-col px-4 gap-4"
+          // className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
+          // style={
+          //   mobile
+          //     ? { gap: "20px" }
+          //     : {
+          //         display: "grid",
+          //         gridTemplateAreas: `"a b" "c d"`,
+          //         gridTemplateColumns: "1fr 1fr",
+          //         gridTemplateRows: "1fr",
+          //         gap: "20px",
+          //       }
+          // }
         >
           {[
             {
@@ -286,32 +262,6 @@ export default function Home() {
               ),
               text: "테크챗에는 브라우저의 개발자도구를 탐지하는 코드가 항상 동작하여, 소스코드의 유출 및 악의적인 위변조를 차단하고 있습니다.",
             },
-          ].map((content, i) => {
-            return (
-              <Card
-                key={i}
-                data-aos="fade-left"
-                data-aos-delay={i * 100 + 100}
-                data-aos-anchor-placement="center-bottom"
-                data-aos-duration="750"
-                className="h-full w-full p-4 bg-black"
-                // style={{ gridArea: content.gridArea }}
-                shadow={"sm"}
-              >
-                <CardHeader>
-                  <p className="text-2xl font-bold whitespace-pre-line text-white">
-                    {content.title}
-                  </p>
-                </CardHeader>
-                {/* <Divider></Divider> */}
-                <CardBody className="gap-4 text-balance break-keep">
-                  <p className="text-white leading-relaxed">{content.text}</p>
-                  {content.img}
-                </CardBody>
-              </Card>
-            );
-          })}
-          {[
             {
               title: "적대적 프롬프트 주입 공격을\n필터링하는 sLLM 에이전트",
               // gridArea: "a",
@@ -370,18 +320,19 @@ export default function Home() {
           </p>
         </div>
         <div
-        // className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
-        // style={
-        //   mobile
-        //     ? { gap: "20px" }
-        //     : {
-        //         display: "grid",
-        //         gridTemplateAreas: `"a b" "c d"`,
-        //         gridTemplateColumns: "1fr 1fr",
-        //         gridTemplateRows: "1fr",
-        //         gap: "20px",
-        //       }
-        // }
+          className="flex flex-col px-4 gap-4"
+          // className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
+          // style={
+          //   mobile
+          //     ? { gap: "20px" }
+          //     : {
+          //         display: "grid",
+          //         gridTemplateAreas: `"a b" "c d"`,
+          //         gridTemplateColumns: "1fr 1fr",
+          //         gridTemplateRows: "1fr",
+          //         gap: "20px",
+          //       }
+          // }
         >
           {[
             {
@@ -399,32 +350,6 @@ export default function Home() {
               ),
               text: "텍스트 질의 뿐만 아니라 카메라 또는 음성 인식 등의 멀티모달 인터페이스를 지원하여 사용자 편의성을 개선하였습니다.",
             },
-          ].map((content, i) => {
-            return (
-              <Card
-                key={i}
-                data-aos="fade-right"
-                data-aos-delay={i * 100 + 100}
-                data-aos-anchor-placement="center-bottom"
-                data-aos-duration="750"
-                className="h-full w-full p-4 bg-[#A7CDA2]"
-                // style={{ gridArea: content.gridArea }}
-                shadow={"sm"}
-              >
-                <CardHeader>
-                  <p className="text-2xl font-bold whitespace-pre-line text-primary">
-                    {content.title}
-                  </p>
-                </CardHeader>
-                {/* <Divider></Divider> */}
-                <CardBody className="gap-4 text-balance break-keep">
-                  <p className="text-primary leading-relaxed">{content.text}</p>
-                  {content.img}
-                </CardBody>
-              </Card>
-            );
-          })}
-          {[
             {
               title: "군용장비의 3D 모델링으로 실증적 진단",
               gridArea: "d",
