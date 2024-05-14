@@ -22,6 +22,7 @@ import Image from "next/image";
 import Footer from "@/components/common/footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { IconChart, IconLike, IconLock } from "@/components/common/icons";
 
 export default function Home() {
   const router = useRouter();
@@ -131,12 +132,14 @@ export default function Home() {
       </div>
 
       {/* 1. 놀라운 성능 */}
-      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-24">
+      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-36">
         <div
           data-aos="fade-up"
           data-aos-duration="750"
-          className="flex flex-col items-center justify-center space-y-8"
+          data-aos-anchor-placement="center-bottom"
+          className="flex flex-col items-center justify-center space-y-6"
         >
+          <IconChart width={"30"}></IconChart>
           <p className="select-none text-3xl font-bold">
             최고의 전투력을 위한,<br></br> 테크쳇의 놀라운 성능.
           </p>
@@ -197,6 +200,7 @@ export default function Home() {
                 // data-aos-delay={i * 100 + 100}
                 data-aos-anchor-placement="center-bottom"
                 data-aos-duration="750"
+                data-aos-anchor-placement="center-bottom"
                 className="h-full w-full p-4 bg-secondary"
                 // style={{ gridArea: content.gridArea }}
                 shadow={"sm"}
@@ -220,12 +224,14 @@ export default function Home() {
       </div>
 
       {/* 2. 강력한 보안 */}
-      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-24">
+      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-36">
         <div
           data-aos="fade-up"
           data-aos-duration="750"
-          className="flex flex-col items-center justify-center space-y-8"
+          data-aos-anchor-placement="center-bottom"
+          className="flex flex-col items-center justify-center space-y-6"
         >
+          <IconLock width={30}></IconLock>
           <p className="select-none text-3xl font-bold text-center">
             데이터를 보호하기 위한,<br></br>테크챗의 지속적인 노력.
           </p>
@@ -286,6 +292,7 @@ export default function Home() {
                 // data-aos-delay={i * 100 + 100}
                 data-aos-anchor-placement="center-bottom"
                 data-aos-duration="750"
+                data-aos-anchor-placement="center-bottom"
                 className="h-full w-full p-4 bg-black"
                 // style={{ gridArea: content.gridArea }}
                 shadow={"sm"}
@@ -309,12 +316,14 @@ export default function Home() {
       </div>
 
       {/* 3. 직관적인  */}
-      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-24">
+      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-36">
         <div
           data-aos="fade-up"
           data-aos-duration="750"
-          className="flex flex-col items-center justify-center space-y-8"
+          data-aos-anchor-placement="center-bottom"
+          className="flex flex-col items-center justify-center space-y-6"
         >
+          <IconLike width={30}></IconLike>
           <p className="select-none text-3xl font-bold">
             누구나 손쉽게 배우는,<br></br>직관적인 사용자 경험.
           </p>
@@ -372,6 +381,7 @@ export default function Home() {
                 // data-aos-delay={i * 100 + 100}
                 data-aos-anchor-placement="center-bottom"
                 data-aos-duration="750"
+                data-aos-anchor-placement="center-bottom"
                 className="h-full w-full p-4 bg-[#A7CDA2]"
                 // style={{ gridArea: content.gridArea }}
                 shadow={"sm"}
@@ -395,11 +405,12 @@ export default function Home() {
       </div>
 
       {/* 3. 직관적인  */}
-      {/* <div className="flex h-fit flex-col items-center justify-center space-y-8">
+      {/* <div className="flex h-fit flex-col items-center justify-center space-y-6">
         <div
           data-aos="fade-up"
           data-aos-duration="750"
-          className="flex flex-col items-center justify-center space-y-8"
+             data-aos-anchor-placement="center-bottom"
+          className="flex flex-col items-center justify-center space-y-6"
         >
           <p className="select-none text-3xl font-bold">
             누구나 손쉽게 배우는,<br></br>직관적인 사용자 경험.
