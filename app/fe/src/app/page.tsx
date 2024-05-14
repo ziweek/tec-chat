@@ -112,7 +112,7 @@ export default function Home() {
         <div className="absolute bottom-4 z-20">
           <LottieArrowDown play loop width={50}></LottieArrowDown>
         </div>
-        <div className="absolute  w-auto min-w-full min-h-full max-w-none h-full bg-black/75 z-10"></div>
+        <div className="absolute w-auto min-w-full h-screen max-w-none bg-black/75 z-10"></div>
         <video
           controls={false}
           autoPlay={true}
