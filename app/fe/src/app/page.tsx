@@ -14,6 +14,8 @@ import { useState, useEffect, useRef } from "react";
 import { useIsMobile } from "@/hooks/useMediaQuery";
 import Image from "next/image";
 import Footer from "@/components/common/footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
   const router = useRouter();
@@ -32,28 +34,30 @@ export default function Home() {
     checkResize();
   }, [isMobile]);
 
+  useEffect(() => {
+    AOS.init();
+    return () => {};
+  }, []);
+
   return (
-    <section className="w-full h-full max-w-[1024px] mx-auto min-h-full">
+    <section className="w-full h-full mx-auto min-h-full">
       {/* 1. 프로젝트 소개  */}
-      <div className="flex h-screen flex-col items-center justify-center bg-white">
-        <div className="flex flex-col items-center justify-center space-y-4 w-full">
+      <div className="flex h-screen flex-col items-center justify-center bg-black/75 bg-center bg-blend-darken">
+        <div
+          data-aos={"fade-up"}
+          className="flex flex-col items-center justify-center space-y-4 w-full z-10"
+        >
           {/* 소개 텍스트 */}
           <div className="flex flex-col items-center justify-center w-full gap-1">
-            {/* <Image
-              src={"/icons/appIcon.png"}
-              width={75}
-              height={75}
-              alt="logo"
-            ></Image> */}
             <p
-              className={`select-none font-bold text-primary text-center ${
+              className={`select-none font-bold text-white text-center ${
                 mobile ? "text-3xl" : "text-4xl"
               }`}
             >
               테크_챗
             </p>
             <p
-              className={`select-none font-bold text-primary text-center ${
+              className={`select-none font-bold text-white text-center ${
                 mobile ? "text-md" : "text-lg"
               }`}
             >
@@ -71,11 +75,11 @@ export default function Home() {
             </div>
             <div className="flex flex-row space-x-2">
               <Button
-                className={`hover:-translate-y-1 font-bold ${
+                className={`hover:-translate-y-1 font-bold text-white ${
                   mobile ? "border-2" : "border-3"
                 }`}
                 size={mobile ? "md" : "lg"}
-                color={"primary"}
+                color={"default"}
                 variant={"bordered"}
                 onClick={() => {
                   window.open("https://github.com/ziweek/tec-chat");
@@ -84,11 +88,11 @@ export default function Home() {
                 프로젝트 소개자료
               </Button>
               <Button
-                className={`hover:-translate-y-1 font-bold ${
+                className={`hover:-translate-y-1 font-bold text-white ${
                   mobile ? "border-2" : "border-3"
                 }`}
                 size={mobile ? "md" : "lg"}
-                color={"primary"}
+                color={"default"}
                 variant={"bordered"}
                 onClick={() => {
                   router.push("/home");
@@ -102,10 +106,284 @@ export default function Home() {
         <div className="absolute bottom-4">
           <LottieArrowDown play loop width={50}></LottieArrowDown>
         </div>
+        {/* <video
+          autoPlay
+          loop
+          muted
+          className="absolute z-0 w-auto min-w-full min-h-full max-w-none"
+        >
+          <source src={require("../../public/video/pr.mp4")} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video> */}
       </div>
-      {/* 2. 핵심 기술 설명 */}
-      <div className="flex h-full py-16 min-h-screen flex-col items-center justify-center space-y-8">
-        <p className="select-none text-2xl font-bold">핵심기능 소개</p>
+
+      {/* 1. 놀라운 성능 */}
+      <div className="flex h-fit py-24 flex-col items-center justify-center space-y-16">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="750"
+          className="flex flex-col items-center justify-center space-y-8"
+        >
+          <p className="select-none text-3xl font-bold">
+            최고의 전투력을 위한,<br></br> 테크쳇의 놀라운 성능.
+          </p>
+          <p className="select-none text-center">
+            기술교범 계의 챗 GPT로 등장한 테크챗은<br></br>뛰어난 성능에서부터
+            시작합니다.
+          </p>
+        </div>
+        <div
+          className="flex min-h-[40vh] w-full select-none flex-col items-center justify-between max-w-[1024px] px-4"
+          style={
+            mobile
+              ? { gap: "20px" }
+              : {
+                  display: "grid",
+                  gridTemplateAreas: `"a b" "c d"`,
+                  gridTemplateColumns: "1fr 1fr",
+                  gridTemplateRows: "1fr 1fr",
+                  gap: "20px",
+                }
+          }
+        >
+          {[
+            {
+              title: "개발자도구 탐지 장치로\n소스코드 유출 방지",
+              gridArea: "a",
+              img: (
+                <Image
+                  src={"/images/logo_ollama.png"}
+                  width={100}
+                  height={100}
+                  alt="img"
+                  className="mx-auto h-[120px] w-fit"
+                ></Image>
+              ),
+              text: "테크챗에는 브라우저의 개발자도구를 탐지하는 코드가 항상 동작하여, 소스코드의 유출 및 악의적인 위변조를 차단하고 있습니다.",
+            },
+            {
+              title: "적대적 프롬프트 주입 공격을\n필터링하는 sLLM 에이전트",
+              gridArea: "a",
+              img: (
+                <Image
+                  src={"/images/logo_ollama.png"}
+                  width={100}
+                  height={100}
+                  alt="img"
+                  className="mx-auto h-[120px] w-fit"
+                ></Image>
+              ),
+              text: "테크챗에는 프롬프트를 필터링하는 별도의 sLLM 에이전트를 배치하여, 사용자의 악의적인 프롬프트에 대응하고 있습니다.",
+            },
+          ].map((content, i) => {
+            return (
+              <Card
+                key={i}
+                data-aos={"fade-up"}
+                data-aos-delay="250"
+                data-aos-duration="750"
+                className="min-h-[300px] h-full w-full p-4 bg-secondary"
+                style={{ gridArea: content.gridArea }}
+                shadow={"sm"}
+              >
+                <CardHeader>
+                  <p className="text-2xl font-bold whitespace-pre-line text-white">
+                    {content.title}
+                  </p>
+                </CardHeader>
+                {/* <Divider></Divider> */}
+                <CardBody className="gap-4 text-balance break-keep">
+                  <p className="text-white leading-relaxed">{content.text}</p>
+                  {content.img}
+                </CardBody>
+              </Card>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* 2. 강력한 보안 */}
+      <div className="flex h-fit py-24 flex-col items-center justify-center space-y-16">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="750"
+          className="flex flex-col items-center justify-center space-y-8"
+        >
+          <p className="select-none text-3xl font-bold text-center">
+            데이터를 보호하기 위한,<br></br>테크챗의 지속적인 노력.
+          </p>
+          <p className="select-none text-center">
+            전자 교범 데이터를 운용하는 테크챗은<br></br>강력한 수준의 보안
+            정책을 지향하며<br></br>지속적으로 노력하고 있습니다.
+          </p>
+        </div>
+        <div
+          className="flex min-h-[40vh] w-full select-none flex-col items-center justify-between max-w-[1024px] px-4"
+          style={
+            mobile
+              ? { gap: "20px" }
+              : {
+                  display: "grid",
+                  gridTemplateAreas: `"a b" "c d"`,
+                  gridTemplateColumns: "1fr 1fr",
+                  gridTemplateRows: "1fr 1fr",
+                  gap: "20px",
+                }
+          }
+        >
+          {[
+            {
+              title: "개발자도구 탐지 장치로\n소스코드 유출 방지",
+              gridArea: "a",
+              img: (
+                <Image
+                  src={"/images/logo_ollama.png"}
+                  width={100}
+                  height={100}
+                  alt="img"
+                  className="mx-auto h-[120px] w-fit"
+                ></Image>
+              ),
+              text: "테크챗에는 브라우저의 개발자도구를 탐지하는 코드가 항상 동작하여, 소스코드의 유출 및 악의적인 위변조를 차단하고 있습니다.",
+            },
+            {
+              title: "적대적 프롬프트 주입 공격을\n필터링하는 sLLM 에이전트",
+              gridArea: "a",
+              img: (
+                <Image
+                  src={"/images/logo_ollama.png"}
+                  width={100}
+                  height={100}
+                  alt="img"
+                  className="mx-auto h-[120px] w-fit"
+                ></Image>
+              ),
+              text: "테크챗에는 프롬프트를 필터링하는 별도의 sLLM 에이전트를 배치하여, 사용자의 악의적인 프롬프트에 대응하고 있습니다.",
+            },
+          ].map((content, i) => {
+            return (
+              <Card
+                key={i}
+                data-aos="fade-left"
+                data-aos-delay="250"
+                data-aos-duration="750"
+                className="min-h-[300px] h-full w-full p-4 bg-black"
+                style={{ gridArea: content.gridArea }}
+                shadow={"sm"}
+              >
+                <CardHeader>
+                  <p className="text-2xl font-bold whitespace-pre-line text-white">
+                    {content.title}
+                  </p>
+                </CardHeader>
+                {/* <Divider></Divider> */}
+                <CardBody className="gap-4 text-balance break-keep">
+                  <p className="text-white leading-relaxed">{content.text}</p>
+                  {content.img}
+                </CardBody>
+              </Card>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* 3. 직관적인  */}
+      <div className="flex h-fit py-24 flex-col items-center justify-center space-y-16">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="750"
+          className="flex flex-col items-center justify-center space-y-8"
+        >
+          <p className="select-none text-3xl font-bold">
+            누구나 손쉽게 배우는,<br></br>직관적인 사용자 경험.
+          </p>
+          <p className="select-none text-center">
+            기술교범 계의 챗 GPT로 등장한 테크챗은<br></br>뛰어난 성능에서부터
+            시작합니다.
+          </p>
+        </div>
+        <div
+          className="flex min-h-[40vh] w-full select-none flex-col items-center justify-between max-w-[1024px] px-4"
+          style={
+            mobile
+              ? { gap: "20px" }
+              : {
+                  display: "grid",
+                  gridTemplateAreas: `"a b" "c d"`,
+                  gridTemplateColumns: "1fr 1fr",
+                  gridTemplateRows: "1fr 1fr",
+                  gap: "20px",
+                }
+          }
+        >
+          {[
+            {
+              title: "텍스트, 이미지, 음성 등 멀티모달 분석",
+              gridArea: "c",
+              img: (
+                <div className="mx-auto h-[120px] w-fit flex flex-col justify-center">
+                  <LottieVoiceRecognition
+                    // play
+                    // loop
+                    height={80}
+                    goTo={12}
+                  ></LottieVoiceRecognition>
+                </div>
+              ),
+              text: "텍스트 질의 뿐만 아니라 카메라 또는 음성 인식 등의 멀티모달 인터페이스를 지원하여 사용자 편의성을 개선하였습니다.",
+            },
+            {
+              title: "군용장비의 3D 모델링으로 실증적 진단",
+              gridArea: "d",
+              img: (
+                <div className="mx-auto h-[120px] w-fit flex flex-col justify-center">
+                  <Lottie3DModel goTo={30} height={120}></Lottie3DModel>
+                </div>
+              ),
+              text: "blender 등의 소프트웨어로 작성된 3D 모델링 구조도를 통해 운용장비의 파트에 대해 직관적으로 접근할 수 있습니다.",
+            },
+          ].map((content, i) => {
+            return (
+              <Card
+                key={i}
+                data-aos="fade-right"
+                data-aos-delay="250"
+                data-aos-duration="750"
+                className="min-h-[300px] h-full w-full p-4 bg-black"
+                style={{ gridArea: content.gridArea }}
+                shadow={"sm"}
+              >
+                <CardHeader>
+                  <p className="text-2xl font-bold whitespace-pre-line text-white">
+                    {content.title}
+                  </p>
+                </CardHeader>
+                {/* <Divider></Divider> */}
+                <CardBody className="gap-4 text-balance break-keep">
+                  <p className="text-white leading-relaxed">{content.text}</p>
+                  {content.img}
+                </CardBody>
+              </Card>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* 3. 직관적인  */}
+      {/* <div className="flex h-fit py-24 flex-col items-center justify-center space-y-8">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="750"
+          className="flex flex-col items-center justify-center space-y-8"
+        >
+          <p className="select-none text-3xl font-bold">
+            누구나 손쉽게 배우는,<br></br>직관적인 사용자 경험.
+          </p>
+          <p className="select-none text-center">
+            기술교범 계의 챗 GPT로 등장한 테크챗은<br></br>뛰어난 성능에서부터
+            시작합니다.
+          </p>
+        </div>
         <div
           className="flex min-h-[40vh] w-full select-none flex-col items-center justify-between max-w-[1024px] px-4"
           style={
@@ -193,7 +471,7 @@ export default function Home() {
             );
           })}
         </div>
-      </div>
+      </div> */}
       {/* Footer */}
       <Footer isFixed></Footer>
     </section>
