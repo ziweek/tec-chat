@@ -146,7 +146,7 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex flex-col px-4 gap-4"
+          className="flex flex-col px-8 gap-4"
           // className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4 gap-4"
           // style={
           //   mobile
@@ -202,13 +202,15 @@ export default function Home() {
                 shadow={"sm"}
               >
                 <CardHeader>
-                  <p className="text-2xl font-bold whitespace-pre-line text-white">
+                  <p className="text-xl font-bold whitespace-pre-line text-white leading-relaxed">
                     {content.title}
                   </p>
                 </CardHeader>
                 {/* <Divider></Divider> */}
                 <CardBody className="gap-4 text-balance break-keep">
-                  <p className="text-white leading-relaxed">{content.text}</p>
+                  <p className="text-white leading-relaxed text-sm">
+                    {content.text}
+                  </p>
                   {content.img}
                 </CardBody>
               </Card>
@@ -233,7 +235,7 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex flex-col px-4 gap-4"
+          className="flex flex-col px-8 gap-4"
           // className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
           // style={
           //   mobile
@@ -289,13 +291,15 @@ export default function Home() {
                 shadow={"sm"}
               >
                 <CardHeader>
-                  <p className="text-2xl font-bold whitespace-pre-line text-white">
+                  <p className="text-xl font-bold whitespace-pre-line text-white leading-relaxed">
                     {content.title}
                   </p>
                 </CardHeader>
                 {/* <Divider></Divider> */}
                 <CardBody className="gap-4 text-balance break-keep">
-                  <p className="text-white leading-relaxed">{content.text}</p>
+                  <p className="text-white leading-relaxed text-sm">
+                    {content.text}
+                  </p>
                   {content.img}
                 </CardBody>
               </Card>
@@ -320,7 +324,7 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex flex-col px-4 gap-4"
+          className="flex flex-col px-8 gap-4"
           // className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
           // style={
           //   mobile
@@ -373,13 +377,15 @@ export default function Home() {
                 shadow={"sm"}
               >
                 <CardHeader>
-                  <p className="text-2xl font-bold whitespace-pre-line text-primary">
+                  <p className="text-xl font-bold whitespace-pre-line text-primary leading-relaxed">
                     {content.title}
                   </p>
                 </CardHeader>
                 {/* <Divider></Divider> */}
                 <CardBody className="gap-4 text-balance break-keep">
-                  <p className="text-primary leading-relaxed">{content.text}</p>
+                  <p className="text-primary leading-relaxed text-sm">
+                    {content.text}
+                  </p>
                   {content.img}
                 </CardBody>
               </Card>
@@ -477,14 +483,14 @@ export default function Home() {
                 shadow={"sm"}
               >
                 <CardHeader>
-                  <p className="text-md font-bold text-primary">
+                  <p className="text-d font-bold text-primary leading-relaxed">
                     {content.title}
                   </p>
                 </CardHeader>
                 <Divider></Divider>
                 <CardBody className="gap-2 text-pretty">
                   {content.img}
-                  <p className="leading-loose">{content.text}</p>
+                  <p className="leading-loose text-sm">{content.text}</p>
                 </CardBody>
               </Card>
             );
@@ -492,12 +498,13 @@ export default function Home() {
         </div>
       </div> */}
       {/* Footer */}
-      <div className="px-4 py-12">
+      <div className="px-8 py-12">
         <Accordion variant={"shadow"} className="bg-black/20">
           <AccordionItem
             key="1"
             aria-label="Accordion 1"
             title="데이터 출처 확인하기"
+            classNames={{ title: "text-sm" }}
           >
             sdf
           </AccordionItem>
