@@ -194,7 +194,7 @@ export default function Home() {
               <Card
                 key={i}
                 data-aos={"fade-up"}
-                data-aos-delay={i * 100 + 100}
+                // data-aos-delay={i * 100 + 100}
                 data-aos-anchor-placement="center-bottom"
                 data-aos-duration="750"
                 className="h-full w-full p-4 bg-secondary"
@@ -283,7 +283,7 @@ export default function Home() {
               <Card
                 key={i}
                 data-aos="fade-left"
-                data-aos-delay={i * 100 + 100}
+                // data-aos-delay={i * 100 + 100}
                 data-aos-anchor-placement="center-bottom"
                 data-aos-duration="750"
                 className="h-full w-full p-4 bg-black"
@@ -369,7 +369,7 @@ export default function Home() {
               <Card
                 key={i}
                 data-aos="fade-right"
-                data-aos-delay={i * 100 + 100}
+                // data-aos-delay={i * 100 + 100}
                 data-aos-anchor-placement="center-bottom"
                 data-aos-duration="750"
                 className="h-full w-full p-4 bg-[#A7CDA2]"
