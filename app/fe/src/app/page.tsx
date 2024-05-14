@@ -146,7 +146,7 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex h-full w-full select-none flex-col items-center justify-between max-w-[1024px] px-4"
+          className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
           style={
             mobile
               ? { gap: "20px" }
@@ -258,7 +258,7 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex h-full w-full select-none flex-col items-center justify-between max-w-[1024px] px-4"
+          className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
           style={
             mobile
               ? { gap: "20px" }
@@ -370,7 +370,7 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex h-full w-full select-none flex-col items-center justify-between max-w-[1024px] px-4"
+          className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
           style={
             mobile
               ? { gap: "20px" }
@@ -479,7 +479,7 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex h-full w-full select-none flex-col items-center justify-between max-w-[1024px] px-4"
+          className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4"
           style={
             mobile
               ? { gap: "20px" }
