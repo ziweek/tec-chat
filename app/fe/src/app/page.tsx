@@ -4,10 +4,16 @@ import {
   Lottie3DModel,
   LottieArrowDown,
   LottieDotLoading,
-  LottieEnsemble,
   LottieVoiceRecognition,
 } from "@/components/common/lotties";
-import { Button, Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
+import {
+  Button,
+  Card,
+  CardHeader,
+  CardBody,
+  Accordion,
+  AccordionItem,
+} from "@nextui-org/react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
@@ -42,10 +48,10 @@ export default function Home() {
   return (
     <section className="w-full h-full mx-auto min-h-full">
       {/* 1. 프로젝트 소개  */}
-      <div className="flex h-screen flex-col items-center justify-center bg-black/75 bg-center bg-blend-darken">
+      <div className="flex h-screen flex-col items-center justify-center bg-black">
         <div
-          data-aos={"fade-up"}
-          className="flex flex-col items-center justify-center space-y-4 w-full z-10"
+          // data-aos={"fade-up"}
+          className="flex flex-col items-center justify-center space-y-4 w-full z-20"
         >
           {/* 소개 텍스트 */}
           <div className="flex flex-col items-center justify-center w-full gap-1">
@@ -103,22 +109,23 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-4">
+        <div className="absolute bottom-4 z-20">
           <LottieArrowDown play loop width={50}></LottieArrowDown>
         </div>
-        {/* <video
+        <div className="absolute  w-auto min-w-full min-h-full max-w-none h-full bg-black/75 z-10"></div>
+        <video
           autoPlay
           loop
           muted
-          className="absolute z-0 w-auto min-w-full min-h-full max-w-none"
+          className="absolute z-0 w-auto min-w-full h-full max-w-none"
         >
-          <source src={require("../../public/video/pr.mp4")} type="video/mp4" />
+          <source src={require("../../public/video/bg.mp4")} type="video/mp4" />
           Your browser does not support the video tag.
-        </video> */}
+        </video>
       </div>
 
       {/* 1. 놀라운 성능 */}
-      <div className="flex h-fit py-24 flex-col items-center justify-center space-y-16">
+      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-24">
         <div
           data-aos="fade-up"
           data-aos-duration="750"
@@ -133,7 +140,7 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex min-h-[40vh] w-full select-none flex-col items-center justify-between max-w-[1024px] px-4"
+          className="flex h-full w-full select-none flex-col items-center justify-between max-w-[1024px] px-4"
           style={
             mobile
               ? { gap: "20px" }
@@ -141,15 +148,15 @@ export default function Home() {
                   display: "grid",
                   gridTemplateAreas: `"a b" "c d"`,
                   gridTemplateColumns: "1fr 1fr",
-                  gridTemplateRows: "1fr 1fr",
+                  gridTemplateRows: "1fr",
                   gap: "20px",
                 }
           }
         >
           {[
             {
-              title: "개발자도구 탐지 장치로\n소스코드 유출 방지",
-              gridArea: "a",
+              title: "적대적 프롬프트 주입 공격을\n필터링하는 sLLM 에이전트",
+              // gridArea: "a",
               img: (
                 <Image
                   src={"/images/logo_ollama.png"}
@@ -159,11 +166,11 @@ export default function Home() {
                   className="mx-auto h-[120px] w-fit"
                 ></Image>
               ),
-              text: "테크챗에는 브라우저의 개발자도구를 탐지하는 코드가 항상 동작하여, 소스코드의 유출 및 악의적인 위변조를 차단하고 있습니다.",
+              text: "테크챗에는 프롬프트를 필터링하는 별도의 sLLM 에이전트를 배치하여, 사용자의 악의적인 프롬프트에 대응하고 있습니다.",
             },
             {
               title: "적대적 프롬프트 주입 공격을\n필터링하는 sLLM 에이전트",
-              gridArea: "a",
+              // gridArea: "a",
               img: (
                 <Image
                   src={"/images/logo_ollama.png"}
@@ -180,10 +187,11 @@ export default function Home() {
               <Card
                 key={i}
                 data-aos={"fade-up"}
-                data-aos-delay="250"
-                data-aos-duration="750"
-                className="min-h-[300px] h-full w-full p-4 bg-secondary"
-                style={{ gridArea: content.gridArea }}
+                data-aos-delay={i * 250 + 250}
+                data-aos-anchor-placement="center-bottom"
+                data-aos-duration="500"
+                className="h-full w-full p-4 bg-secondary"
+                // style={{ gridArea: content.gridArea }}
                 shadow={"sm"}
               >
                 <CardHeader>
@@ -203,7 +211,7 @@ export default function Home() {
       </div>
 
       {/* 2. 강력한 보안 */}
-      <div className="flex h-fit py-24 flex-col items-center justify-center space-y-16">
+      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-24">
         <div
           data-aos="fade-up"
           data-aos-duration="750"
@@ -218,7 +226,7 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex min-h-[40vh] w-full select-none flex-col items-center justify-between max-w-[1024px] px-4"
+          className="flex h-full w-full select-none flex-col items-center justify-between max-w-[1024px] px-4"
           style={
             mobile
               ? { gap: "20px" }
@@ -226,7 +234,7 @@ export default function Home() {
                   display: "grid",
                   gridTemplateAreas: `"a b" "c d"`,
                   gridTemplateColumns: "1fr 1fr",
-                  gridTemplateRows: "1fr 1fr",
+                  gridTemplateRows: "1fr",
                   gap: "20px",
                 }
           }
@@ -234,7 +242,7 @@ export default function Home() {
           {[
             {
               title: "개발자도구 탐지 장치로\n소스코드 유출 방지",
-              gridArea: "a",
+              // gridArea: "a",
               img: (
                 <Image
                   src={"/images/logo_ollama.png"}
@@ -248,7 +256,7 @@ export default function Home() {
             },
             {
               title: "적대적 프롬프트 주입 공격을\n필터링하는 sLLM 에이전트",
-              gridArea: "a",
+              // gridArea: "a",
               img: (
                 <Image
                   src={"/images/logo_ollama.png"}
@@ -265,10 +273,11 @@ export default function Home() {
               <Card
                 key={i}
                 data-aos="fade-left"
-                data-aos-delay="250"
-                data-aos-duration="750"
-                className="min-h-[300px] h-full w-full p-4 bg-black"
-                style={{ gridArea: content.gridArea }}
+                data-aos-delay={i * 250 + 250}
+                data-aos-anchor-placement="center-bottom"
+                data-aos-duration="500"
+                className="h-full w-full p-4 bg-black"
+                // style={{ gridArea: content.gridArea }}
                 shadow={"sm"}
               >
                 <CardHeader>
@@ -288,7 +297,7 @@ export default function Home() {
       </div>
 
       {/* 3. 직관적인  */}
-      <div className="flex h-fit py-24 flex-col items-center justify-center space-y-16">
+      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-24">
         <div
           data-aos="fade-up"
           data-aos-duration="750"
@@ -303,7 +312,7 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex min-h-[40vh] w-full select-none flex-col items-center justify-between max-w-[1024px] px-4"
+          className="flex h-full w-full select-none flex-col items-center justify-between max-w-[1024px] px-4"
           style={
             mobile
               ? { gap: "20px" }
@@ -311,7 +320,7 @@ export default function Home() {
                   display: "grid",
                   gridTemplateAreas: `"a b" "c d"`,
                   gridTemplateColumns: "1fr 1fr",
-                  gridTemplateRows: "1fr 1fr",
+                  gridTemplateRows: "1fr",
                   gap: "20px",
                 }
           }
@@ -347,20 +356,21 @@ export default function Home() {
               <Card
                 key={i}
                 data-aos="fade-right"
-                data-aos-delay="250"
-                data-aos-duration="750"
-                className="min-h-[300px] h-full w-full p-4 bg-black"
-                style={{ gridArea: content.gridArea }}
+                data-aos-delay={i * 250 + 250}
+                data-aos-anchor-placement="center-bottom"
+                data-aos-duration="500"
+                className="h-full w-full p-4 bg-[#A7CDA2]"
+                // style={{ gridArea: content.gridArea }}
                 shadow={"sm"}
               >
                 <CardHeader>
-                  <p className="text-2xl font-bold whitespace-pre-line text-white">
+                  <p className="text-2xl font-bold whitespace-pre-line text-primary">
                     {content.title}
                   </p>
                 </CardHeader>
                 {/* <Divider></Divider> */}
                 <CardBody className="gap-4 text-balance break-keep">
-                  <p className="text-white leading-relaxed">{content.text}</p>
+                  <p className="text-primary leading-relaxed">{content.text}</p>
                   {content.img}
                 </CardBody>
               </Card>
@@ -370,7 +380,7 @@ export default function Home() {
       </div>
 
       {/* 3. 직관적인  */}
-      {/* <div className="flex h-fit py-24 flex-col items-center justify-center space-y-8">
+      {/* <div className="flex h-fit flex-col items-center justify-center space-y-8">
         <div
           data-aos="fade-up"
           data-aos-duration="750"
@@ -385,7 +395,7 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex min-h-[40vh] w-full select-none flex-col items-center justify-between max-w-[1024px] px-4"
+          className="flex h-full w-full select-none flex-col items-center justify-between max-w-[1024px] px-4"
           style={
             mobile
               ? { gap: "20px" }
@@ -393,7 +403,7 @@ export default function Home() {
                   display: "grid",
                   gridTemplateAreas: `"a b" "c d"`,
                   gridTemplateColumns: "1fr 1fr",
-                  gridTemplateRows: "1fr 1fr",
+                  gridTemplateRows: "1fr",
                   gap: "20px",
                 }
           }
@@ -401,7 +411,7 @@ export default function Home() {
           {[
             {
               title: "Ollama를 활용한 온디바이스 생성형 AI",
-              gridArea: "a",
+              // gridArea: "a",
               img: (
                 <Image
                   src={"/images/logo_ollama.png"}
@@ -453,8 +463,8 @@ export default function Home() {
             return (
               <Card
                 key={i}
-                className="min-h-[300px] h-full w-full p-4"
-                style={{ gridArea: content.gridArea }}
+                className="h-full w-full p-4"
+                // style={{ gridArea: content.gridArea }}
                 shadow={"sm"}
               >
                 <CardHeader>
@@ -473,6 +483,18 @@ export default function Home() {
         </div>
       </div> */}
       {/* Footer */}
+      <div className="px-4 py-12">
+        <Accordion variant={"shadow"} className="bg-black/20">
+          <AccordionItem
+            key="1"
+            aria-label="Accordion 1"
+            title="데이터 출처 확인하기"
+          >
+            sdf
+          </AccordionItem>
+        </Accordion>
+      </div>
+
       <Footer isFixed></Footer>
     </section>
   );
