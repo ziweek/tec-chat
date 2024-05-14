@@ -200,7 +200,6 @@ export default function Home() {
                 // data-aos-delay={i * 100 + 100}
                 data-aos-anchor-placement="center-bottom"
                 data-aos-duration="750"
-                data-aos-anchor-placement="center-bottom"
                 className="h-full w-full p-4 bg-secondary"
                 // style={{ gridArea: content.gridArea }}
                 shadow={"sm"}
@@ -292,7 +291,6 @@ export default function Home() {
                 // data-aos-delay={i * 100 + 100}
                 data-aos-anchor-placement="center-bottom"
                 data-aos-duration="750"
-                data-aos-anchor-placement="center-bottom"
                 className="h-full w-full p-4 bg-black"
                 // style={{ gridArea: content.gridArea }}
                 shadow={"sm"}
@@ -381,7 +379,6 @@ export default function Home() {
                 // data-aos-delay={i * 100 + 100}
                 data-aos-anchor-placement="center-bottom"
                 data-aos-duration="750"
-                data-aos-anchor-placement="center-bottom"
                 className="h-full w-full p-4 bg-[#A7CDA2]"
                 // style={{ gridArea: content.gridArea }}
                 shadow={"sm"}
