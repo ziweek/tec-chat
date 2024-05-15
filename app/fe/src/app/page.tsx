@@ -15,14 +15,63 @@ import {
   AccordionItem,
 } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useIsMobile } from "@/hooks/useMediaQuery";
 import Image from "next/image";
 import Footer from "@/components/common/footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { IconChart, IconLike, IconLock } from "@/components/common/icons";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+
+import { Bar } from "react-chartjs-2";
+import HorizontalSlider from "@/components/horizontal-slider";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+const labels = ["Summary", "Overall"];
+const data = {
+  labels,
+  datasets: [
+    {
+      label: "ChatGPT",
+      data: [33.3, 42.7],
+      backgroundColor: "#74AA9C",
+    },
+    {
+      label: "테크챗 LLM",
+      data: [56.94, 59.05],
+      backgroundColor: "#0C2F1D",
+    },
+  ],
+};
+const options = {
+  responsive: true,
+  animation: {
+    // delay: 1000,
+    duration: 1000,
+  },
+  plugins: {
+    legend: {
+      position: "top" as const,
+    },
+  },
+};
 
 export default function Home() {
   const router = useRouter();
@@ -36,14 +85,15 @@ export default function Home() {
       setMobile(false);
     }
   };
-
   useEffect(() => {
     checkResize();
   }, [isMobile]);
-
   useEffect(() => {
-    AOS.init();
-    return () => {};
+    AOS.init({
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      anchorPlacement: "center-bottom", // defines which position of the element regarding to window should trigger the animation
+      // once: false, // whether animation should happen only once - while scrolling down
+    });
   }, []);
 
   return (
@@ -131,12 +181,62 @@ export default function Home() {
         </video>
       </div>
 
+      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-36">
+        <p className="select-none text-center">
+          팀 옴니포스는 대한민국 육군의 일원으로<br></br>창조적인 아이디어와
+          혁신적인 기술역량으로<br></br>강한 육군의 가치를 함께 고민합니다.
+        </p>
+      </div>
+
+      {/* 인트로  */}
+      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-36">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="750"
+          className="flex flex-col items-center justify-center space-y-12"
+        >
+          <p className="select-none text-3xl font-bold text-center">
+            테크챗에 담아놓은<br></br>대한민국 육군의 이야기
+          </p>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="750"
+          className="flex flex-col gap-4 w-full h-fit"
+        >
+          <HorizontalSlider
+            width={300}
+            height={300}
+            backgroundColor="#00000050"
+            content={[
+              {
+                title: "육군종합정비창",
+                text: "K1A1 전차 종합 정비",
+                bgImgSrc: "/images/thumbnail/engineer.png",
+                tags: ["정비"],
+              },
+              {
+                title: "육군1사단 기동정비반",
+                text: "파손된 차량의 엔진 교체 작업 중",
+                bgImgSrc: "/images/thumbnail/engineer1.jpg",
+                tags: ["기동정비반"],
+              },
+              {
+                title: "육군종합정비창",
+                text: "인터뷰 내용",
+                bgImgSrc: "/images/thumbnail/engineer2.jpg",
+                tags: ["정비"],
+              },
+            ]}
+          ></HorizontalSlider>
+        </div>
+      </div>
+
       {/* 1. 놀라운 성능 */}
       <div className="flex h-fit flex-col items-center justify-center gap-8 pt-36">
         <div
           data-aos="fade-up"
           data-aos-duration="750"
-          data-aos-anchor-placement="center-bottom"
           className="flex flex-col items-center justify-center space-y-6"
         >
           <IconChart width={"30"}></IconChart>
@@ -149,7 +249,7 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex flex-col px-8 gap-4"
+          className="flex flex-col px-4 gap-4"
           // className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4 gap-4"
           // style={
           //   mobile
@@ -165,22 +265,12 @@ export default function Home() {
         >
           {[
             {
-              title: "적대적 프롬프트 주입 공격을\n필터링하는 sLLM 에이전트",
-              // gridArea: "a",
-              img: (
-                <Image
-                  src={"/images/logo_ollama.png"}
-                  width={100}
-                  height={100}
-                  alt="img"
-                  className="mx-auto h-[120px] w-fit"
-                ></Image>
-              ),
+              title: "LLM-Blender Ensenble 구조로\n기존의 모델을 상회하는 성능",
+              img: <Bar data={data} options={options} height={250}></Bar>,
               text: "테크챗에는 프롬프트를 필터링하는 별도의 sLLM 에이전트를 배치하여, 사용자의 악의적인 프롬프트에 대응하고 있습니다.",
             },
             {
               title: "적대적 프롬프트 주입 공격을\n필터링하는 sLLM 에이전트",
-              // gridArea: "a",
               img: (
                 <Image
                   src={"/images/logo_ollama.png"}
@@ -197,24 +287,23 @@ export default function Home() {
               <Card
                 key={i}
                 data-aos={"fade-up"}
-                // data-aos-delay={i * 100 + 100}
-                data-aos-anchor-placement="center-bottom"
                 data-aos-duration="750"
-                className="h-full w-full p-4 bg-secondary"
-                // style={{ gridArea: content.gridArea }}
-                shadow={"sm"}
+                data-aos-id={`super-duper`}
+                className="h-full w-full py-4"
+                shadow={"none"}
               >
                 <CardHeader>
-                  <p className="text-xl font-bold whitespace-pre-line text-white leading-relaxed">
+                  <p className="text-xl font-bold whitespace-pre-line text-secondary leading-relaxed mx-auto text-center">
                     {content.title}
                   </p>
                 </CardHeader>
                 {/* <Divider></Divider> */}
                 <CardBody className="gap-4 text-balance break-keep">
-                  <p className="text-white leading-relaxed text-sm">
+                  {/* <p className="text-secondary leading-relaxed text-sm">
                     {content.text}
-                  </p>
+                  </p> */}
                   {content.img}
+                  <></>
                 </CardBody>
               </Card>
             );
@@ -227,7 +316,6 @@ export default function Home() {
         <div
           data-aos="fade-up"
           data-aos-duration="750"
-          data-aos-anchor-placement="center-bottom"
           className="flex flex-col items-center justify-center space-y-6"
         >
           <IconLock width={30}></IconLock>
@@ -289,7 +377,7 @@ export default function Home() {
                 key={i}
                 data-aos="fade-left"
                 // data-aos-delay={i * 100 + 100}
-                data-aos-anchor-placement="center-bottom"
+
                 data-aos-duration="750"
                 className="h-full w-full p-4 bg-black"
                 // style={{ gridArea: content.gridArea }}
@@ -318,7 +406,6 @@ export default function Home() {
         <div
           data-aos="fade-up"
           data-aos-duration="750"
-          data-aos-anchor-placement="center-bottom"
           className="flex flex-col items-center justify-center space-y-6"
         >
           <IconLike width={30}></IconLike>
@@ -377,7 +464,7 @@ export default function Home() {
                 key={i}
                 data-aos="fade-right"
                 // data-aos-delay={i * 100 + 100}
-                data-aos-anchor-placement="center-bottom"
+
                 data-aos-duration="750"
                 className="h-full w-full p-4 bg-[#A7CDA2]"
                 // style={{ gridArea: content.gridArea }}
@@ -406,7 +493,7 @@ export default function Home() {
         <div
           data-aos="fade-up"
           data-aos-duration="750"
-             data-aos-anchor-placement="center-bottom"
+  
           className="flex flex-col items-center justify-center space-y-6"
         >
           <p className="select-none text-3xl font-bold">
