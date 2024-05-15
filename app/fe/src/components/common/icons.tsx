@@ -103,9 +103,9 @@ export const IconLinkedIn = (props: IconProps) => {
         <svg
           fill={props.fill || "#080341"}
           // stroke={props.strokeFill || "#080341"}
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="0"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="0"
           height={props.height}
           width={props.width}
           viewBox="0 0 24 24"
@@ -120,9 +120,9 @@ export const IconLinkedIn = (props: IconProps) => {
         <svg
           fill={props.fill || "#080341"}
           // stroke={props.strokeFill || "#080341"}
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="0"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="0"
           height={props.height}
           width={props.width}
           viewBox="0 0 24 24"
@@ -156,9 +156,9 @@ export const IconGithub = (props: IconProps) => {
           <g
             id="Page-1"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           >
             <g
               id="Dribbble-Light-Preview"
@@ -189,9 +189,9 @@ export const IconGithub = (props: IconProps) => {
           <g
             id="Page-1"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           >
             <g
               id="Dribbble-Light-Preview"
@@ -226,37 +226,37 @@ export const IconVoice = (props: IconProps) => {
           <path
             d="M6 11L6 13"
             stroke={props.fill || "#080341"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M9 9L9 15"
             stroke={props.fill || "#080341"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M15 9L15 15"
             stroke={props.fill || "#080341"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M18 11L18 13"
             stroke={props.fill || "#080341"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M12 11L12 13"
             stroke={props.fill || "#080341"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ) : (
@@ -270,37 +270,37 @@ export const IconVoice = (props: IconProps) => {
           <path
             d="M6 11L6 13"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M9 9L9 15"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M15 9L15 15"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M18 11L18 13"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M12 11L12 13"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       )}
@@ -322,30 +322,30 @@ export const IconPrev = (props: IconProps) => {
           <path
             d="M7.00003 11.7501L11.5 17.1501"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M7.00003 11.7501L11.5 6.35016"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M12 11.7501L16.5 17.1501"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M12 11.7501L16.5 6.35016"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ) : (
@@ -359,30 +359,30 @@ export const IconPrev = (props: IconProps) => {
           <path
             d="M7.00003 11.7501L11.5 17.1501"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M7.00003 11.7501L11.5 6.35016"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M12 11.7501L16.5 17.1501"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M12 11.7501L16.5 6.35016"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       )}
@@ -404,30 +404,30 @@ export const IconNext = (props: IconProps) => {
           <path
             d="M16 11.7501L11.5 17.1501"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M16 11.7501L11.5 6.35016"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M11 11.7501L6.50003 17.1501"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M11 11.7501L6.50003 6.35016"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ) : (
@@ -441,30 +441,30 @@ export const IconNext = (props: IconProps) => {
           <path
             d="M16 11.7501L11.5 17.1501"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M16 11.7501L11.5 6.35016"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M11 11.7501L6.50003 17.1501"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M11 11.7501L6.50003 6.35016"
             stroke={props.fill || "#000000"}
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       )}
