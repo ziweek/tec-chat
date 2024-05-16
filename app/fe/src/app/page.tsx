@@ -181,7 +181,11 @@ export default function Home() {
         </video>
       </div>
 
-      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-36">
+      <div
+        data-aos="fade-in"
+        data-aos-duration="1000"
+        className="flex h-fit flex-col items-center justify-center gap-8 pt-48"
+      >
         <p className="select-none text-center">
           팀 옴니포스는 대한민국 육군의 일원으로<br></br>창조적인 아이디어와
           혁신적인 기술역량으로<br></br>강한 육군의 가치를 함께 고민합니다.
@@ -189,10 +193,10 @@ export default function Home() {
       </div>
 
       {/* 인트로  */}
-      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-36">
+      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-48">
         <div
           data-aos="fade-up"
-          data-aos-duration="750"
+          data-aos-duration="1000"
           className="flex flex-col items-center justify-center space-y-12"
         >
           <p className="select-none text-3xl font-bold text-center">
@@ -201,7 +205,7 @@ export default function Home() {
         </div>
         <div
           data-aos="fade-up"
-          data-aos-duration="750"
+          data-aos-duration="1000"
           className="flex flex-col gap-4 w-full h-fit"
         >
           <HorizontalSlider
@@ -227,16 +231,34 @@ export default function Home() {
                 bgImgSrc: "/images/thumbnail/engineer2.jpg",
                 tags: ["정비"],
               },
+              {
+                title: "육군종합정비창",
+                text: "K1A1 전차 종합 정비",
+                bgImgSrc: "/images/thumbnail/engineer.png",
+                tags: ["정비"],
+              },
+              {
+                title: "육군1사단 기동정비반",
+                text: "파손된 차량의 엔진 교체 작업 중",
+                bgImgSrc: "/images/thumbnail/engineer1.jpg",
+                tags: ["기동정비반"],
+              },
+              {
+                title: "육군종합정비창",
+                text: "인터뷰 내용",
+                bgImgSrc: "/images/thumbnail/engineer2.jpg",
+                tags: ["정비"],
+              },
             ]}
           ></HorizontalSlider>
         </div>
       </div>
 
       {/* 1. 놀라운 성능 */}
-      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-36">
+      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-48">
         <div
           data-aos="fade-up"
-          data-aos-duration="750"
+          data-aos-duration="1000"
           className="flex flex-col items-center justify-center space-y-6"
         >
           <IconChart width={"30"}></IconChart>
@@ -267,10 +289,9 @@ export default function Home() {
             {
               title: "LLM-Blender Ensenble 구조로\n기존의 모델을 상회하는 성능",
               img: <Bar data={data} options={options} height={250}></Bar>,
-              text: "테크챗에는 프롬프트를 필터링하는 별도의 sLLM 에이전트를 배치하여, 사용자의 악의적인 프롬프트에 대응하고 있습니다.",
             },
             {
-              title: "적대적 프롬프트 주입 공격을\n필터링하는 sLLM 에이전트",
+              title: "실시간 3D 랜더링\n필터링하는 sLLM 에이전트",
               img: (
                 <Image
                   src={"/images/logo_ollama.png"}
@@ -280,14 +301,13 @@ export default function Home() {
                   className="mx-auto h-[120px] w-fit"
                 ></Image>
               ),
-              text: "테크챗에는 프롬프트를 필터링하는 별도의 sLLM 에이전트를 배치하여, 사용자의 악의적인 프롬프트에 대응하고 있습니다.",
             },
           ].map((content, i) => {
             return (
               <Card
                 key={i}
                 data-aos={"fade-up"}
-                data-aos-duration="750"
+                data-aos-duration="1000"
                 data-aos-id={`super-duper`}
                 className="h-full w-full py-4"
                 shadow={"none"}
@@ -312,10 +332,10 @@ export default function Home() {
       </div>
 
       {/* 2. 강력한 보안 */}
-      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-36">
+      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-48">
         <div
           data-aos="fade-up"
-          data-aos-duration="750"
+          data-aos-duration="1000"
           className="flex flex-col items-center justify-center space-y-6"
         >
           <IconLock width={30}></IconLock>
@@ -348,11 +368,11 @@ export default function Home() {
               // gridArea: "a",
               img: (
                 <Image
-                  src={"/images/logo_ollama.png"}
-                  width={100}
-                  height={100}
+                  src={"/images/devtool_detection.png"}
+                  width={600}
+                  height={600}
                   alt="img"
-                  className="mx-auto h-[120px] w-fit"
+                  className="mx-auto w-full"
                 ></Image>
               ),
               text: "테크챗에는 브라우저의 개발자도구를 탐지하는 코드가 항상 동작하여, 소스코드의 유출 및 악의적인 위변조를 차단하고 있습니다.",
@@ -362,11 +382,11 @@ export default function Home() {
               // gridArea: "a",
               img: (
                 <Image
-                  src={"/images/logo_ollama.png"}
-                  width={100}
-                  height={100}
+                  src={"/images/defensive_agent.png"}
+                  width={600}
+                  height={600}
                   alt="img"
-                  className="mx-auto h-[120px] w-fit"
+                  className="mx-auto w-full"
                 ></Image>
               ),
               text: "테크챗에는 프롬프트를 필터링하는 별도의 sLLM 에이전트를 배치하여, 사용자의 악의적인 프롬프트에 대응하고 있습니다.",
@@ -378,7 +398,7 @@ export default function Home() {
                 data-aos="fade-left"
                 // data-aos-delay={i * 100 + 100}
 
-                data-aos-duration="750"
+                data-aos-duration="1000"
                 className="h-full w-full p-4 bg-black"
                 // style={{ gridArea: content.gridArea }}
                 shadow={"sm"}
@@ -402,10 +422,10 @@ export default function Home() {
       </div>
 
       {/* 3. 직관적인  */}
-      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-36">
+      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-48">
         <div
           data-aos="fade-up"
-          data-aos-duration="750"
+          data-aos-duration="1000"
           className="flex flex-col items-center justify-center space-y-6"
         >
           <IconLike width={30}></IconLike>
@@ -465,8 +485,8 @@ export default function Home() {
                 data-aos="fade-right"
                 // data-aos-delay={i * 100 + 100}
 
-                data-aos-duration="750"
-                className="h-full w-full p-4 bg-[#A7CDA2]"
+                data-aos-duration="1000"
+                className="h-full w-full p-4 bg-[#A7CDA275]"
                 // style={{ gridArea: content.gridArea }}
                 shadow={"sm"}
               >
@@ -492,7 +512,7 @@ export default function Home() {
       {/* <div className="flex h-fit flex-col items-center justify-center space-y-6">
         <div
           data-aos="fade-up"
-          data-aos-duration="750"
+          data-aos-duration="1000"
   
           className="flex flex-col items-center justify-center space-y-6"
         >
