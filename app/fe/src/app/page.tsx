@@ -646,7 +646,7 @@ export default function Home() {
             title="데이터 출처 확인하기"
             classNames={{ title: "text-sm" }}
           >
-            " "
+            aa
           </AccordionItem>
         </Accordion>
       </div>
