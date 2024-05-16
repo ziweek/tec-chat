@@ -34,15 +34,9 @@ import {
 
 import { Bar } from "react-chartjs-2";
 import HorizontalSlider from "@/components/horizontal-slider";
+import ThreeRender from "@/components/3d-render";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Legend);
 
 const labels = ["Summary", "Overall"];
 const data = {
@@ -77,6 +71,8 @@ export default function Home() {
   const router = useRouter();
   const isMobile = useIsMobile();
   const [mobile, setMobile] = useState<boolean>(false);
+  const [isThreeModelVisible, setIsThreeModelVisible] =
+    useState<boolean>(false);
 
   const checkResize = () => {
     if (isMobile) {
@@ -92,7 +88,7 @@ export default function Home() {
     AOS.init({
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       anchorPlacement: "center-bottom", // defines which position of the element regarding to window should trigger the animation
-      // once: false, // whether animation should happen only once - while scrolling down
+      once: true, // whether animation should happen only once - while scrolling down
     });
   }, []);
 
@@ -181,12 +177,12 @@ export default function Home() {
         </video>
       </div>
 
-      <div
-        data-aos="fade-in"
-        data-aos-duration="1000"
-        className="flex h-fit flex-col items-center justify-center gap-8 pt-48"
-      >
-        <p className="select-none text-center">
+      <div className="flex h-screen flex-col items-center justify-center gap-8 pt-48">
+        <p
+          data-aos="fade-in"
+          data-aos-duration="1000"
+          className="select-none text-center"
+        >
           팀 옴니포스는 대한민국 육군의 일원으로<br></br>창조적인 아이디어와
           혁신적인 기술역량으로<br></br>강한 육군의 가치를 함께 고민합니다.
         </p>
@@ -197,10 +193,14 @@ export default function Home() {
         <div
           data-aos="fade-up"
           data-aos-duration="1000"
-          className="flex flex-col items-center justify-center space-y-12"
+          className="flex flex-col items-center justify-center space-y-8"
         >
           <p className="select-none text-3xl font-bold text-center">
             테크챗에 담아놓은<br></br>대한민국 육군의 이야기
+          </p>
+          <p className="select-none text-center">
+            우리 육군의 실제 목소리를 담아<br></br>테크챗이라는 도전을
+            시작하였습니다.
           </p>
         </div>
         <div
@@ -231,31 +231,13 @@ export default function Home() {
                 bgImgSrc: "/images/thumbnail/engineer2.jpg",
                 tags: ["정비"],
               },
-              {
-                title: "육군종합정비창",
-                text: "K1A1 전차 종합 정비",
-                bgImgSrc: "/images/thumbnail/engineer.png",
-                tags: ["정비"],
-              },
-              {
-                title: "육군1사단 기동정비반",
-                text: "파손된 차량의 엔진 교체 작업 중",
-                bgImgSrc: "/images/thumbnail/engineer1.jpg",
-                tags: ["기동정비반"],
-              },
-              {
-                title: "육군종합정비창",
-                text: "인터뷰 내용",
-                bgImgSrc: "/images/thumbnail/engineer2.jpg",
-                tags: ["정비"],
-              },
             ]}
           ></HorizontalSlider>
         </div>
       </div>
 
       {/* 1. 놀라운 성능 */}
-      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-48">
+      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-48 max-w-[600px] mx-auto">
         <div
           data-aos="fade-up"
           data-aos-duration="1000"
@@ -271,7 +253,7 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex flex-col px-4 gap-4"
+          className="flex flex-col px-4 gap-4 w-full mx-auto"
           // className="flex h-fit w-full select-none flex-col items-center max-w-[1024px] px-4 gap-4"
           // style={
           //   mobile
@@ -288,18 +270,61 @@ export default function Home() {
           {[
             {
               title: "LLM-Blender Ensenble 구조로\n기존의 모델을 상회하는 성능",
-              img: <Bar data={data} options={options} height={250}></Bar>,
+              img: (
+                <Bar
+                  data={{
+                    labels: ["Summary", "Overall"],
+                    datasets: [
+                      {
+                        label: "ChatGPT",
+                        data: [33.3, 42.7],
+                        backgroundColor: "#74AA9C",
+                      },
+                      {
+                        label: "테크챗 LLM",
+                        data: [56.94, 59.05],
+                        backgroundColor: "#0C2F1D",
+                      },
+                    ],
+                  }}
+                  options={{
+                    responsive: true,
+                    animation: {
+                      // delay: 1000,
+                      duration: 1000,
+                    },
+                    plugins: {
+                      legend: {
+                        position: "top" as const,
+                      },
+                    },
+                  }}
+                  height={250}
+                ></Bar>
+              ),
             },
             {
               title: "실시간 3D 랜더링\n필터링하는 sLLM 에이전트",
               img: (
-                <Image
-                  src={"/images/logo_ollama.png"}
-                  width={100}
-                  height={100}
-                  alt="img"
-                  className="mx-auto h-[120px] w-fit"
-                ></Image>
+                <div className="w-full h-[500px] bg-primary-50 flex flex-col justify-center items-center rounded-xl overflow-clip">
+                  {isThreeModelVisible ? (
+                    <ThreeRender src={"/models/k9.glb"}></ThreeRender>
+                  ) : (
+                    <div className="flex flex-col justify-center items-center gap-4">
+                      <Button
+                        color={"primary"}
+                        onPress={() => {
+                          setIsThreeModelVisible(!isThreeModelVisible);
+                        }}
+                      >
+                        3D 모델링 보기
+                      </Button>
+                      <p className="text-primary text-sm">
+                        수초 이내의 로딩 시간이 소요될 수 있습니다.
+                      </p>
+                    </div>
+                  )}
+                </div>
               ),
             },
           ].map((content, i) => {
@@ -332,7 +357,7 @@ export default function Home() {
       </div>
 
       {/* 2. 강력한 보안 */}
-      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-48">
+      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-48 max-w-[600px] mx-auto">
         <div
           data-aos="fade-up"
           data-aos-duration="1000"
@@ -364,7 +389,7 @@ export default function Home() {
         >
           {[
             {
-              title: "개발자도구 탐지 장치로\n소스코드 유출 방지",
+              title: "개발자도구 감지 및 차단 장치로 소스코드 유출 방지",
               // gridArea: "a",
               img: (
                 <Image
@@ -378,7 +403,7 @@ export default function Home() {
               text: "테크챗에는 브라우저의 개발자도구를 탐지하는 코드가 항상 동작하여, 소스코드의 유출 및 악의적인 위변조를 차단하고 있습니다.",
             },
             {
-              title: "적대적 프롬프트 주입 공격을\n필터링하는 sLLM 에이전트",
+              title: "적대적 프롬프트 주입 공격을 필터링하는 sLLM 에이전트",
               // gridArea: "a",
               img: (
                 <Image
@@ -389,7 +414,7 @@ export default function Home() {
                   className="mx-auto w-full"
                 ></Image>
               ),
-              text: "테크챗에는 프롬프트를 필터링하는 별도의 sLLM 에이전트를 배치하여, 사용자의 악의적인 프롬프트에 대응하고 있습니다.",
+              text: "테크챗에는 프롬프트를 필터링하는 별도의 sLLM 에이전트를 배치하여, 사용자의 악의적인 프롬프트 공격에 대비하고 있습니다.",
             },
           ].map((content, i) => {
             return (
@@ -404,7 +429,7 @@ export default function Home() {
                 shadow={"sm"}
               >
                 <CardHeader>
-                  <p className="text-xl font-bold whitespace-pre-line text-white leading-relaxed">
+                  <p className="text-xl font-bold whitespace-pre-line text-white leading-relaxed break-keep">
                     {content.title}
                   </p>
                 </CardHeader>
@@ -422,7 +447,7 @@ export default function Home() {
       </div>
 
       {/* 3. 직관적인  */}
-      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-48">
+      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-48 max-w-[600px] mx-auto">
         <div
           data-aos="fade-up"
           data-aos-duration="1000"
@@ -433,8 +458,8 @@ export default function Home() {
             누구나 손쉽게 배우는,<br></br>직관적인 사용자 경험.
           </p>
           <p className="select-none text-center">
-            기술교범 계의 챗 GPT로 등장한 테크챗은<br></br>뛰어난 성능에서부터
-            시작합니다.
+            모든 장병을 위해 설계된 테크챗은<br></br>간단한 조작만으로도 기능을
+            수행합니다.
           </p>
         </div>
         <div
@@ -454,7 +479,7 @@ export default function Home() {
         >
           {[
             {
-              title: "텍스트, 이미지, 음성 등 멀티모달 분석",
+              title: "텍스트, 이미지, 음성 등을 포괄하는 멀티모달 데이터 분석",
               gridArea: "c",
               img: (
                 <div className="mx-auto h-[120px] w-fit flex flex-col justify-center">
@@ -486,7 +511,7 @@ export default function Home() {
                 // data-aos-delay={i * 100 + 100}
 
                 data-aos-duration="1000"
-                className="h-full w-full p-4 bg-[#A7CDA275]"
+                className="h-full w-full p-4 bg-[#A7CDA275] break-keep"
                 // style={{ gridArea: content.gridArea }}
                 shadow={"sm"}
               >
@@ -613,15 +638,15 @@ export default function Home() {
         </div>
       </div> */}
       {/* Footer */}
-      <div className="px-8 py-12">
-        <Accordion variant={"shadow"} className="bg-black/20">
+      <div className="px-8 py-12 max-w-[600px] mx-auto">
+        <Accordion variant={"shadow"} className="bg-black/20" isDisabled>
           <AccordionItem
             key="1"
             aria-label="Accordion 1"
             title="데이터 출처 확인하기"
             classNames={{ title: "text-sm" }}
           >
-            sdf
+            " "
           </AccordionItem>
         </Accordion>
       </div>
