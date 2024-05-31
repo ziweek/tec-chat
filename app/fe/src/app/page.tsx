@@ -38,35 +38,6 @@ import ThreeRender from "@/components/3d-render";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Legend);
 
-const labels = ["Summary", "Overall"];
-const data = {
-  labels,
-  datasets: [
-    {
-      label: "ChatGPT",
-      data: [33.3, 42.7],
-      backgroundColor: "#74AA9C",
-    },
-    {
-      label: "테크챗 LLM",
-      data: [56.94, 59.05],
-      backgroundColor: "#0C2F1D",
-    },
-  ],
-};
-const options = {
-  responsive: true,
-  animation: {
-    // delay: 1000,
-    duration: 1000,
-  },
-  plugins: {
-    legend: {
-      position: "top" as const,
-    },
-  },
-};
-
 export default function Home() {
   const router = useRouter();
   const isMobile = useIsMobile();
@@ -177,7 +148,7 @@ export default function Home() {
         </video>
       </div>
 
-      <div className="flex h-screen flex-col items-center justify-center gap-8 pt-48">
+      <div className="flex flex-col items-center justify-center gap-8 pt-48">
         <p
           data-aos="fade-in"
           data-aos-duration="1000"
