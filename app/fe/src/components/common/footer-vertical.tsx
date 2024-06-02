@@ -3,7 +3,7 @@ import { IconBook, IconHome, IconChat } from "./icons";
 import { useIsMobile } from "@/hooks/useMediaQuery";
 import { useState, useEffect } from "react";
 
-export default function FooterMain(props: {
+export default function FooterVertical(props: {
   indexOfButton: number;
   setIndexOfButton: Function;
   isModalVisible: boolean;
@@ -26,7 +26,7 @@ export default function FooterMain(props: {
 
   return (
     <div
-      className={`flex flex-row w-full h-[80px] items-center justify-around drop-shadow-md border-t-1 pb-2 max-w-[400px]`}
+      className={`flex flex-col h-screen w-[80px] items-center justify-start drop-shadow-md border-r-1 py-8 gap-8`}
     >
       {[
         {
@@ -46,7 +46,11 @@ export default function FooterMain(props: {
           <Button
             key={i}
             className={`w-fit h-fit ${
-              i == 1 ? "bottom-4 text-white p-3" : "p-2"
+              i == 1
+                ? mobile
+                  ? "bottom-4 text-white p-3"
+                  : "text-white p-3"
+                : "p-2"
             }`}
             color={"primary"}
             isIconOnly
