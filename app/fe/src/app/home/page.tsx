@@ -8,40 +8,54 @@ import { useIsMobile } from "@/hooks/useMediaQuery";
 import FooterMain from "@/components/common/footer-main";
 import Image from "next/image";
 import ModalChatbot from "@/components/chatbot-modal";
+import FooterVertical from "@/components/common/footer-vertical";
 
 export default function Home() {
   //
   const router = useRouter();
   const [indexOfButton, setIndexOfButton] = useState<number>(0);
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
-  // const isMobile = useIsMobile();
-  // const [mobile, setMobile] = useState<boolean>(false);
+  const isMobile = useIsMobile();
+  const [mobile, setMobile] = useState<boolean>(false);
 
-  // const checkResize = () => {
-  //   if (isMobile) {
-  //     setMobile(true);
-  //   } else {
-  //     setMobile(false);
-  //   }
-  // };
+  const checkResize = () => {
+    if (isMobile) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  };
 
-  // useEffect(() => {
-  //   checkResize();
-  // }, [isMobile]);
+  useEffect(() => {
+    checkResize();
+  }, [isMobile]);
 
   return (
     <>
       <section
-        className="flex flex-col items-center w-full min-h-screen gap-4 max-w-[400px] mx-auto h-full"
+        className="flex flex-col items-center w-full min-h-screen gap-4 mx-auto h-screen justify-start"
         style={{
           display: "grid",
-          gridTemplateRows: "auto 1fr auto",
-          gridTemplateColumns: "1fr",
+          gridTemplateRows: mobile ? "auto 1fr auto" : "1fr",
+          gridTemplateColumns: mobile ? "1fr" : "auto 1fr 1fr",
+          // gap: mobile ? "" : "20px",
         }}
       >
-        <Header></Header>
+        {!mobile && (
+          <FooterVertical
+            indexOfButton={indexOfButton}
+            setIndexOfButton={setIndexOfButton}
+            isModalVisible={isModalVisible}
+            setIsModalVisible={setIsModalVisible}
+          ></FooterVertical>
+        )}
+        {/* {mobile && <Header></Header>} */}
         {indexOfButton == 0 && (
-          <div className="flex flex-col justify-start items-center gap-4 px-4 h-full overflow-y-scroll pb-[90px]">
+          <div
+            className={`flex flex-col justify-start items-center gap-4 px-4 h-full overflow-y-scroll pb-[90px] pt-8 ${
+              mobile ? "" : ""
+            }`}
+          >
             {[1, 2, 3].map((e, i) => {
               return (
                 <Card
@@ -82,11 +96,10 @@ export default function Home() {
                         size={"lg"}
                         classNames={{
                           svg: "w-20 h-20 drop-shadow-md",
-                          indicator: "stroke-secondary stroke-[4px]",
+                          indicator: "stroke-primary stroke-[4px]",
                           track: "stroke-[4px]",
                           value: "text-xl font-semibold",
                         }}
-                        // color={"secondary"}
                         value={62}
                         showValueLabel={true}
                       ></CircularProgress>
@@ -110,14 +123,16 @@ export default function Home() {
           </div>
         )}
         {/*  */}
-        <div className="fixed w-full bottom-0">
-          <FooterMain
-            indexOfButton={indexOfButton}
-            setIndexOfButton={setIndexOfButton}
-            isModalVisible={isModalVisible}
-            setIsModalVisible={setIsModalVisible}
-          ></FooterMain>
-        </div>
+        {mobile && (
+          <div className="fixed w-full bottom-0">
+            <FooterMain
+              indexOfButton={indexOfButton}
+              setIndexOfButton={setIndexOfButton}
+              isModalVisible={isModalVisible}
+              setIsModalVisible={setIsModalVisible}
+            ></FooterMain>
+          </div>
+        )}
       </section>
       <ModalChatbot
         isModalVisible={isModalVisible}

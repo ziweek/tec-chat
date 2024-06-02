@@ -1,5 +1,7 @@
 import { Button } from "@nextui-org/react";
 import { IconBook, IconHome, IconChat } from "./icons";
+import { useIsMobile } from "@/hooks/useMediaQuery";
+import { useState, useEffect } from "react";
 
 export default function FooterMain(props: {
   indexOfButton: number;
@@ -7,8 +9,25 @@ export default function FooterMain(props: {
   isModalVisible: boolean;
   setIsModalVisible: Function;
 }) {
+  const isMobile = useIsMobile();
+  const [mobile, setMobile] = useState<boolean>(false);
+
+  const checkResize = () => {
+    if (isMobile) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    checkResize();
+  }, [isMobile]);
+
   return (
-    <div className="flex flex-row w-full h-[80px] items-center justify-around drop-shadow-md border-t-1 pb-2">
+    <div
+      className={`flex flex-row w-full h-[80px] items-center justify-around drop-shadow-md border-t-1 pb-2 max-w-[400px]`}
+    >
       {[
         {
           icon: <IconHome height={20} fill="#0C2F1D"></IconHome>,
@@ -29,7 +48,7 @@ export default function FooterMain(props: {
             className={`w-fit h-fit ${
               i == 1 ? "bottom-4 text-white p-3" : "p-2"
             }`}
-            color={"default"}
+            color={"primary"}
             isIconOnly
             disableRipple
             radius={i == 1 ? "full" : "sm"}
