@@ -28,7 +28,7 @@ export default function FooterMain(props: {
 
   return (
     <div
-      className={`flex flex-row w-full h-[80px] items-center justify-around drop-shadow-md border-t-1 pb-2 max-w-[400px]`}
+      className={`flex flex-row w-full h-[80px] items-center justify-around drop-shadow-md border-t-1 pb-8 max-w-[400px]`}
     >
       {[
         {
