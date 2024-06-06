@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@nextui-org/react";
 import { IconBook, IconHome, IconChat } from "./icons";
 import { useIsMobile } from "@/hooks/useMediaQuery";
