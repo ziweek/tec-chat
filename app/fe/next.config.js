@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 
+const withPWA = require("next-pwa")({
+  dest: "public",
+  disable: process.env.NODE_ENV === "development",
+});
+const withVideos = require("next-videos");
 const nextConfig = {
+  // ...withVideos(),
+  // ...withPWA(),
   webpack: (config) => {
     config.resolve.alias.canvas = false;
     config.module.rules.push({
@@ -18,15 +25,13 @@ const nextConfig = {
   },
   output: "standalone",
 };
-const withPWA = require("next-pwa")({
-  dest: "public",
-  disable: process.env.NODE_ENV === "development",
-});
-const withVideos = require("next-videos");
 
+// module.exports = withPWA();
+// module.exports = nextConfig;
+// module.exports = withVideos({ ...nextConfig });
 module.exports = {
   // next.js config
-  ...withPWA,
+  ...withPWA(),
   ...withVideos(),
   ...nextConfig,
 };

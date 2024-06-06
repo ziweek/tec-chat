@@ -16,7 +16,7 @@ export default function AppProvider({ children }: any) {
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={true} />
       <NextUIProvider>
-        <NextThemesProvider attribute="class" defaultTheme={systemTheme}>
+        <NextThemesProvider attribute="class" defaultTheme={"light"}>
           {children}
         </NextThemesProvider>
       </NextUIProvider>
