@@ -56,7 +56,7 @@ export default function Home() {
               mobile ? "" : ""
             }`}
           >
-            {[1, 2, 3].map((e, i) => {
+            {[1].map((e, i) => {
               return (
                 <Card
                   key={i}

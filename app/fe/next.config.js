@@ -1,3 +1,26 @@
+// /** @type {import('next').NextConfig} */
+
+// const nextConfig = {
+//   webpack: (config) => {
+//     config.resolve.alias.canvas = false;
+
+//     return config;
+//   },
+//   output: "standalone",
+// };
+// const withPWA = require("next-pwa")({
+//   dest: "public",
+//   disable: process.env.NODE_ENV === "development",
+// });
+// const withVideos = require("next-videos");
+
+// module.exports = {
+//   // next.js config
+//   ...withPWA,
+//   ...withVideos,
+//   ...nextConfig,
+// };
+
 /** @type {import('next').NextConfig} */
 
 const withPWA = require("next-pwa")({
@@ -5,12 +28,31 @@ const withPWA = require("next-pwa")({
   disable: true,
 });
 const withVideos = require("next-videos");
-const nextConfig = { reactStrictMode: false };
+const nextConfig = {
+  reactStrictMode: false,
+  swcMinify: true,
+  webpack: (config) => {
+    config.resolve.alias.canvas = false;
 
-// module.exports = nextConfig;
+    config.module.rules.push({
+      test: /.(mov|mp4)$/,
+      use: [
+        {
+          loader: "file-loader",
+          options: {
+            name: "[name].[ext]",
+          },
+        },
+      ],
+    });
+
+    return config;
+  },
+  output: "standalone",
+};
 
 module.exports = withPWA({
   // next.js config
-  ...withVideos(),
   ...nextConfig,
+  ...withVideos(),
 });

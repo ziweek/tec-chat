@@ -19,7 +19,7 @@ const config: Config = {
           750: "#0C2F1D75",
           DEFAULT: "#0C2F1D",
         },
-        secondary: "#45D483",
+        secondary: "#0C2F1D",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
