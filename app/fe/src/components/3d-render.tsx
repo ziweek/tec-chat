@@ -7,21 +7,21 @@ import { OrbitControls, Environment, Clone } from "@react-three/drei";
 import { useGLTF } from "@react-three/drei";
 import { Progress } from "@nextui-org/react";
 
-const Model = ({ url }: any) => {
-  const { scene }: any = useGLTF(url);
-  return (
-    <Clone
-      object={scene}
-      scale={0.025}
-      position={[35, -35, 35]}
-      onBeforeRender={() => {
-        console.log(11);
-      }}
-    />
-  );
-};
-
 export default function ThreeRender(props: any) {
+  const Model = ({ url }: any) => {
+    const { scene }: any = useGLTF(url);
+    return (
+      <Clone
+        object={scene}
+        scale={props.scale}
+        position={[0, 0, 0]}
+        onBeforeRender={() => {
+          console.log(11);
+        }}
+      />
+    );
+  };
+
   const Models = [
     {
       name: "k9",
@@ -32,13 +32,13 @@ export default function ThreeRender(props: any) {
   function Loader() {
     const { active, progress, errors, item, loaded, total } = useProgress();
     return (
-      <Html center>
-        <div className="text-black flex w-full h-full">
+      <Html fullscreen>
+        <div className="flex h-full w-full items-center justify-center text-black">
           <Progress
             aria-label="Loading..."
             value={progress}
-            color={"danger"}
-            // className="max-w-3xl"
+            color={"primary"}
+            className="px-8"
             showValueLabel={true}
           />
         </div>
