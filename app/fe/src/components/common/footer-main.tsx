@@ -28,7 +28,7 @@ export default function FooterMain(props: {
 
   return (
     <div
-      className={`flex flex-row w-full h-[100px] items-center justify-around drop-shadow-md border-t-1 pb-8 max-w-[400px] bg-white`}
+      className={`flex flex-row w-full h-[90px] items-center justify-around drop-shadow-md border-t-1 pb-4 max-w-[400px] bg-white`}
     >
       {[
         {
@@ -48,7 +48,7 @@ export default function FooterMain(props: {
           <Button
             key={i}
             className={`w-fit h-fit ${
-              i == 1 ? "bottom-4 text-white p-3" : "p-2"
+              i == 1 ? "bottom-4 text-white p-3" : "p-1"
             }`}
             color={"primary"}
             isIconOnly
