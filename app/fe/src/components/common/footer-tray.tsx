@@ -11,7 +11,7 @@ import {
   IconVoiceChat,
 } from "@/components/common/icons";
 import { Button, Tooltip, Input, CircularProgress } from "@nextui-org/react";
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Webcam from "react-webcam";
 
 import "regenerator-runtime";
@@ -20,6 +20,8 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 
 import { useIsMobile } from "@/hooks/useMediaQuery";
+
+import Dictaphone from "@/components/dictaphone";
 
 type propsForFooterTray = {
   showInput?: boolean;
@@ -65,6 +67,18 @@ export default function FooterTray(props: any) {
     facingMode: "camera",
     aspectRatio: 1,
   };
+
+  // const checkResize = () => {
+  //   if (isMobile) {
+  //     setMobile(true);
+  //   } else {
+  //     setMobile(false);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   checkResize();
+  // }, [isMobile]);
 
   return (
     <div className="w-full h-fit gap-4 flex flex-col bg-white rounded-t-2xl pt-4 max-w-[400px]">
