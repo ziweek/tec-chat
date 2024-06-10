@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import AppProvider from "./providers";
 import localFont from "next/font/local";
+import Header from "@/components/common/header";
 
 const nanumSquare = localFont({
   src: [
