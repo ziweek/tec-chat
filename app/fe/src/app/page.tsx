@@ -140,7 +140,7 @@ export default function Home() {
           className="absolute z-0 w-screen h-screen max-w-none overflow-clip object-cover"
         >
           <source
-            src={require("../../public/video/bg.mp4")}
+            src={"/video/bg.mp4"}
             type="video/mp4"
             className="w-screen h-screen"
           />
