@@ -191,8 +191,8 @@ export default function Home() {
           </Button>
         }
         scrollBehavior={"normal"}
-        className={`${isMobile ? "h-[100vh]" : "h-[500px]"}`}
-        size={isMobile ? "full" : "lg"}
+        className={`${isMobile ? "h-[100vh]" : ""}`}
+        size={isMobile ? "full" : "full"}
       >
         <ModalContent>
           <div
