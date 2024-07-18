@@ -28,7 +28,6 @@ import {
   LinearScale,
   BarElement,
   Title,
-  Tooltip,
   Legend,
 } from "chart.js";
 
@@ -140,7 +139,7 @@ export default function Home() {
           className="absolute z-0 w-screen h-screen max-w-none overflow-clip object-cover"
         >
           <source
-            src={require("../../public/video/bg.mp4")}
+            src={"/video/bg.mp4"}
             type="video/mp4"
             className="w-screen h-screen"
           />
@@ -160,7 +159,7 @@ export default function Home() {
       </div>
 
       {/* 인트로  */}
-      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-48">
+      <div className="flex h-fit flex-col items-center justify-center gap-8 pt-48 max-w-[800px] mx-auto">
         <div
           data-aos="fade-up"
           data-aos-duration="1000"
@@ -279,11 +278,16 @@ export default function Home() {
               img: (
                 <div className="w-full h-[500px] bg-primary-50 flex flex-col justify-center items-center rounded-xl overflow-clip">
                   {isThreeModelVisible ? (
-                    <ThreeRender src={"/models/k9.glb"}></ThreeRender>
+                    <ThreeRender
+                      src={"/models/k9.glb"}
+                      scale={0.03}
+                      position={[0, -100, 0]}
+                    ></ThreeRender>
                   ) : (
                     <div className="flex flex-col justify-center items-center gap-4">
                       <Button
                         color={"primary"}
+                        variant={"shadow"}
                         onPress={() => {
                           setIsThreeModelVisible(!isThreeModelVisible);
                         }}
