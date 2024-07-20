@@ -3,10 +3,9 @@
 <img src="./src/banner_ko.png"/>
 
 <p align="center">
- <!--
-  <strong>🏆 2024 대한민국 육군창업경진대회 수상 작품 🏆</strong>
+ 
+  <strong>🏆 제11회 대한민국 육군창업경진대회 우수상 수상 작품 🏆</strong>
   <br/>
-  -->
   <br/>
   <a href='https://github.com/ziweek/desirable-sea/blob/main/README.md'>
     KOREAN
@@ -73,7 +72,7 @@
 
 > [!NOTE]
 >
-> - 본 아이디어는, 대한민국 육군본부에서 주최하는 [2024 대한민국 육군창업경진대회](https://www.army-startup.co.kr/)에 출품한 프로젝트입니다.
+> - 본 아이디어는, 대한민국 육군본부에서 주최하는 [2024 대한민국 육군창업경진대회](https://www.army-startup.co.kr/)에 출품하여 우수상을 수상한 프로젝트입니다.
 > - 본 아이디어는, LLM(대규모 언어 모델)을 활용한 지능형 챗봇 서비스를 개발하여, 기존의 책자형 야전교범의 문제점을 극복하고 군사장비의 운용에 필요한 정보를 신속하고 정확하게 획득할 수 있는 지능형 전자교범 플랫폼을 연구 및 개발하는 것입니다.
 
 https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e887ddad
