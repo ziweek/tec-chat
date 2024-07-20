@@ -3,28 +3,23 @@
 <img src="./src/banner_ko.png"/>
 
 <p align="center">
+ <strong>🏆 제11회 대한민국 육군창업경진대회 우수상 수상 작품 🏆</strong>
+ <br/>
+ <br/>
+ <a href='https://github.com/ziweek/desirable-sea/blob/main/README.md'>KOREAN</a>
+ &nbsp;|&nbsp;
+ <a href='https://github.com/ziweek/desirable-sea/blob/main/README_EN.md'>ENGLISH</a>
+ <br/>
+ <br/>
+ <strong>생성형 AI를 활용한 야전교범 챗봇 가이드</strong>
+ <br/>
+ <strong>Guide Chatbot to Field Training Utilizing Generative AI</strong>
+ <br/>
+ <br/>
  
-  <strong>🏆 제11회 대한민국 육군창업경진대회 우수상 수상 작품 🏆</strong>
-  <br/>
-  <br/>
-  <a href='https://github.com/ziweek/desirable-sea/blob/main/README.md'>
-    KOREAN
-  </a>
-  &nbsp;|&nbsp;
-  <a href='https://github.com/ziweek/desirable-sea/blob/main/README_EN.md'>
-    ENGLISH
-  </a>
-  <br/>
-  <br/>
-  <strong>생성형 AI를 활용한 야전교범 챗봇 가이드</strong>
-  <br/>
-  <strong>Guide Chatbot to Field Training Utilizing Generative AI</strong>
-  <br/>
-  <br/>
-
-  <a href='https://paperswithcode.com/paper/mistral-7b'>
-    <img src="https://img.shields.io/badge/Paperswithcode-Mistral%207B-25c2a0?style=flat-square"/>
-  </a>
+ <a href='https://paperswithcode.com/paper/mistral-7b'>
+ <img src="https://img.shields.io/badge/Paperswithcode-Mistral%207B-25c2a0?style=flat-square"/>
+ </a>
   <a href='https://paperswithcode.com/paper/gemma-open-models-based-on-gemini-research'>
     <img src="https://img.shields.io/badge/Paperswithcode-Gemma-25c2a0?style=flat-square"/>
   </a>
@@ -36,7 +31,6 @@
   </a>
   <br/>
  
-  
   <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white"/>
   <img src="https://img.shields.io/badge/PWA-5A0FC8?style=flat-square&logo=pwa&logoColor=white"/> 
   <img src="https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white"/>
