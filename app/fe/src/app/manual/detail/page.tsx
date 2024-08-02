@@ -82,6 +82,7 @@ export default function Home() {
               >
                 3D 모델링 보기
               </Button>
+
             )}
           </Card>
           <div className="px-4 leading-loose">
@@ -200,8 +201,8 @@ export default function Home() {
           </Button>
         }
         scrollBehavior={"normal"}
-        className={`${isMobile ? "h-[100vh]" : "h-[500px]"}`}
-        size={isMobile ? "full" : "lg"}
+        className={`${isMobile ? "h-[100vh]" : ""}`}
+        size={isMobile ? "full" : "full"}
       >
         <ModalContent>
           <div
@@ -219,7 +220,11 @@ export default function Home() {
               3D 모델링 살펴보기
             </ModalHeader>
             <div className="overflow-y-scroll h-full w-full flex flex-col items-center">
-              <ThreeRender src={"/models/k9.glb"}></ThreeRender>
+              <ThreeRender
+                src={"/models/k9.glb"}
+                scale={0.03}
+                position={[0, -75, 0]}
+              ></ThreeRender>
             </div>
           </div>
         </ModalContent>

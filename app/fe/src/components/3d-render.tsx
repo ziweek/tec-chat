@@ -14,7 +14,7 @@ export default function ThreeRender(props: any) {
       <Clone
         object={scene}
         scale={props.scale}
-        position={[0, 0, 0]}
+        position={props.position}
         onBeforeRender={() => {
           console.log(11);
         }}

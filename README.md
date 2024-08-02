@@ -3,29 +3,23 @@
 <img src="./src/banner_ko.png"/>
 
 <p align="center">
- <!--
-  <strong>🏆 2024 대한민국 육군창업경진대회 수상 작품 🏆</strong>
-  <br/>
-  -->
-  <br/>
-  <a href='https://github.com/ziweek/desirable-sea/blob/main/README.md'>
-    KOREAN
-  </a>
-  &nbsp;|&nbsp;
-  <a href='https://github.com/ziweek/desirable-sea/blob/main/README_EN.md'>
-    ENGLISH
-  </a>
-  <br/>
-  <br/>
-  <strong>생성형 AI를 활용한 야전교범 챗봇 가이드</strong>
-  <br/>
-  <strong>Guide Chatbot to Field Training Utilizing Generative AI</strong>
-  <br/>
-  <br/>
-
-  <a href='https://paperswithcode.com/paper/mistral-7b'>
-    <img src="https://img.shields.io/badge/Paperswithcode-Mistral%207B-25c2a0?style=flat-square"/>
-  </a>
+ <strong>🏆 제11회 대한민국 육군창업경진대회 우수상 수상 작품 🏆</strong>
+ <br/>
+ <br/>
+ <a href='https://github.com/ziweek/desirable-sea/blob/main/README.md'>KOREAN</a>
+ &nbsp;|&nbsp;
+ <a href='https://github.com/ziweek/desirable-sea/blob/main/README_EN.md'>ENGLISH</a>
+ <br/>
+ <br/>
+ <strong>생성형 AI를 활용한 야전교범 챗봇 가이드</strong>
+ <br/>
+ <strong>Guide Chatbot to Field Training Utilizing Generative AI</strong>
+ <br/>
+ <br/>
+ 
+ <a href='https://paperswithcode.com/paper/mistral-7b'>
+ <img src="https://img.shields.io/badge/Paperswithcode-Mistral%207B-25c2a0?style=flat-square"/>
+ </a>
   <a href='https://paperswithcode.com/paper/gemma-open-models-based-on-gemini-research'>
     <img src="https://img.shields.io/badge/Paperswithcode-Gemma-25c2a0?style=flat-square"/>
   </a>
@@ -37,7 +31,6 @@
   </a>
   <br/>
  
-  
   <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white"/>
   <img src="https://img.shields.io/badge/PWA-5A0FC8?style=flat-square&logo=pwa&logoColor=white"/> 
   <img src="https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white"/>
@@ -73,7 +66,7 @@
 
 > [!NOTE]
 >
-> - 본 아이디어는, 대한민국 육군본부에서 주최하는 [2024 대한민국 육군창업경진대회](https://www.army-startup.co.kr/)에 출품한 프로젝트입니다.
+> - 본 아이디어는, 대한민국 육군본부에서 주최하는 [2024 대한민국 육군창업경진대회](https://www.army-startup.co.kr/)에 출품하여 우수상을 수상한 프로젝트입니다.
 > - 본 아이디어는, LLM(대규모 언어 모델)을 활용한 지능형 챗봇 서비스를 개발하여, 기존의 책자형 야전교범의 문제점을 극복하고 군사장비의 운용에 필요한 정보를 신속하고 정확하게 획득할 수 있는 지능형 전자교범 플랫폼을 연구 및 개발하는 것입니다.
 
 https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e887ddad
