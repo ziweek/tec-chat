@@ -10,7 +10,7 @@ import { Document, Page, pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
 // pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-//   "pdfjs-dist/build/pdf.worker.min.js",
+//   "pdfjs-dist/build/pdf.worker.min.mjs",
 //   import.meta.url
 // ).toString();
 
@@ -139,7 +139,7 @@ export default function TextBubble(props: propsForTextBubble) {
                             <div className="flex w-full h-[300px]">
                               <ThreeRender
                                 src={"/models/k9.glb"}
-                                scale={0.5}
+                                scale={10}
                               ></ThreeRender>
                             </div>
                           ),
