@@ -12,9 +12,9 @@ import ModalChatbot from "@/components/chatbot-modal";
 export default function Home() {
   //
   const router = useRouter();
+  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
   const isMobile = useIsMobile();
   const [mobile, setMobile] = useState<boolean>(false);
-  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
 
   const checkResize = () => {
     if (isMobile) {
