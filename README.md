@@ -1,17 +1,15 @@
-# 안녕, 테크\_챗
+# Hello, Tec_Chat
 
-<img src="./src/banner_ko.png"/>
+<img src="./src/banner_en.png"/>
 
 <p align="center">
- <strong>🏆 제11회 대한민국 육군창업경진대회 우수상 수상 작품 🏆</strong>
+ <strong>🏆 Chief of Staff of the Army Award, in 11th ROKA Entrepreneurship Competition 🏆</strong>
  <br/>
  <br/>
  <a href='https://github.com/ziweek/desirable-sea/blob/main/README.md'>KOREAN</a>
  &nbsp;|&nbsp;
  <a href='https://github.com/ziweek/desirable-sea/blob/main/README_EN.md'>ENGLISH</a>
  <br/>
- <br/>
- <strong>생성형 AI를 활용한 야전교범 챗봇 가이드</strong>
  <br/>
  <strong>Guide Chatbot to Field Training Utilizing Generative AI</strong>
  <br/>
@@ -62,12 +60,12 @@
 <br/>
 <br/>
 
-# 1. 개요
+# 1. Introduction
 
 > [!NOTE]
 >
-> - 본 아이디어는, 대한민국 육군본부에서 주최하는 [2024 대한민국 육군창업경진대회](https://www.army-startup.co.kr/)에 출품하여 우수상을 수상한 프로젝트입니다.
-> - 본 아이디어는, LLM(대규모 언어 모델)을 활용한 지능형 챗봇 서비스를 개발하여, 기존의 책자형 야전교범의 문제점을 극복하고 군사장비의 운용에 필요한 정보를 신속하고 정확하게 획득할 수 있는 지능형 전자교범 플랫폼을 연구 및 개발하는 것입니다.
+> - This idea is a project that won the Chief of Staff of the Army Award (Excellence Award) at the [2024 11th Korea Army Startup Competition](https://www.army-startup.co.kr/) hosted by the Republic of Korea Army Headquarters.
+> - This idea involves developing an intelligent chatbot service powered by Large Language Models (LLMs) to overcome the limitations of traditional booklet-style field manuals. The project aims to research and develop an intelligent electronic manual platform that enables quick and accurate access to essential information for operating military equipment.
 
 https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e887ddad
 
@@ -75,17 +73,17 @@ https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e
   <tr>
      <td>
       <p align='center'>
-        온프레미스 LLM 앙상블 구조
+        On-premise LLM ensemble architecture
       </p>
     </td>
     <td>
       <p align='center'>
-       운용장비 실시간 3D 렌더링
+       Realtime 3D rendering of equipments
       </p>
     </td>
     <td>
       <p align='center'>
-        실제 프로덕트 웹페이지
+        Project Application
       </p>
     </td>
   </tr>
@@ -106,41 +104,7 @@ https://github.com/ziweek/tec-chat/assets/99459331/1265acf4-f164-467d-b7c6-bc51e
 <br/>
 <br/>
 
-# 2. 프로덕트
-
-> [!IMPORTANT]
->
-> <details> <summary><b>프로젝트 진행 현황</b></summary>
-> <br/>
->
-> - [x] 기획안 작성 완료 :ok_hand:
-> - [x] 프론트엔드 개발 완료 :ok_hand:
-> - [x] 벡엔드 개발 완료 :ok_hand:
-> - [x] LLM 서버 개발 완료 :ok_hand:
-> - [x] 데이터베이스 구축 완료 :ok_hand:
-> - [x] 소개자료 및 시연영상 제작 완료 :ok_hand:
->
-> </details>
-
-> [!tip]
->
-> <details> <summary><b>프로토타입 설치 방법</b></summary>
-> <br/>
->
-> iOS에서 설치하는 방법:
->
-> 1.  iOS 기기에서 Safari를 열고 [PWA가 호스팅된 URL](https://desirable-sea.vercel.app/)로 이동합니다.
-> 2.  화면 하단에 있는 공유 아이콘을 탭합니다.
-> 3.  화면을 아래로 스크롤하여 "홈 화면에 추가"를 탭합니다.
-> 4.  우측 상단의 "추가"를 탭합니다.
->
-> Android에서 설치하는 방법:
->
-> 1.  Android 기기에서 Chrome 브라우저를 열고 [PWA가 호스팅된 URL](https://desirable-sea.vercel.app/)로 이동합니다.
-> 2.  화면 우측 상단의 세 점 메뉴를 탭합니다.
-> 3.  "홈 화면에 추가"를 탭합니다.
-> 4.  우측 상단의 "추가"를 탭합니다.
-> </details>
+# 2. Implementation
 
 <details >
  <summary><b>핵심기능</b></summary><br/>
