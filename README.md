@@ -1,4 +1,4 @@
-# Hello, Tec_Chat
+# Hello, Tech_Chat
 
 <img src="./src/banner_en.png"/>
 
@@ -43,7 +43,7 @@
 <br/>
   
 <p align="center">  
-  <strong>아래의 뱃지에서 프로토타입을 확인해보세요.<strong>
+  <strong>Check out prototypes in the badge below<strong>
   <br/>
   <br/>
   <a href='https://tec-chat.vercel.app/'>
